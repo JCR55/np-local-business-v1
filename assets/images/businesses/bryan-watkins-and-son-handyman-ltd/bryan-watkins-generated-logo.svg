@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Bryan Watkins and Son Handyman logo</title>
+  <desc id="desc">A distinct placeholder logo for Bryan Watkins and Son Handyman.</desc>
+  <rect width="1000" height="560" rx="34" fill="#fff8df"/>
+  <rect x="42" y="42" width="916" height="476" rx="34" fill="#fff1a8" stroke="#071b33" stroke-width="18"/>
+  <path d="M98 314 248 178 398 314v142H98z" fill="#ffffff" stroke="#071b33" stroke-width="16" stroke-linejoin="round"/>
+  <path d="M78 312 248 156l170 156" fill="none" stroke="#d83434" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M205 456v-92h86v92" fill="#071b33"/>
+  <path d="M356 194 426 124l44 44-72 72" stroke="#2f8f5b" stroke-width="26" stroke-linecap="round"/>
+  <path d="M418 120l44 44" stroke="#071b33" stroke-width="16" stroke-linecap="round"/>
+  <text x="484" y="178" fill="#d83434" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="900" letter-spacing="5">BRYAN WATKINS</text>
+  <text x="484" y="246" fill="#071b33" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="900" letter-spacing="4">&amp; SON</text>
+  <text x="484" y="322" fill="#071b33" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="900" letter-spacing="5">HANDYMAN</text>
+  <rect x="484" y="360" width="340" height="58" rx="29" fill="#071b33"/>
+  <text x="522" y="398" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" letter-spacing="3">REPAIRS • DIY • MAINTENANCE</text>
+</svg>

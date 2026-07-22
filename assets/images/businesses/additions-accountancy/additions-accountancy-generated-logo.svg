@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" role="img" aria-labelledby="title desc">
+  <title id="title">Additions Accountancy logo</title>
+  <desc id="desc">Additions Accountancy logo.</desc>
+  <rect width="1000" height="560" rx="34" fill="#f4f7fb"/>
+  <path d="M0 0h1000v128H0z" fill="#071b33"/>
+  <path d="M0 128h1000v20H0z" fill="#d83434"/>
+  <text x="70" y="94" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" letter-spacing="8">ADDITIONS</text>
+  <text x="70" y="228" fill="#071b33" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="900" letter-spacing="5">ACCOUNTANCY</text>
+  <text x="74" y="278" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="4">BOOKKEEPING • TAX • ACCOUNTS</text>
+  <g transform="translate(78 330)">
+    <rect x="0" y="0" width="206" height="150" rx="18" fill="#ffffff" stroke="#071b33" stroke-width="12"/>
+    <path d="M42 46h122M42 86h122M42 124h76" stroke="#d83434" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(332 328)">
+    <rect x="0" y="0" width="170" height="152" rx="20" fill="#071b33"/>
+    <path d="M42 44h86M42 78h86M42 112h86" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <circle cx="782" cy="392" r="92" fill="#2f8f5b"/>
+  <path d="M740 392h84M782 350v84" stroke="#ffffff" stroke-width="26" stroke-linecap="round"/>
+</svg>
