@@ -12,5 +12,7 @@ collections:
       - label: "All Businesses"
         name: "businesses"
         file: "data/businesses.json"
+        editor:
+          preview: false
         fields:
           - { label: "Business Data Content", name: "body", widget: "code", default_language: "json" }
