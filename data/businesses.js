@@ -3000,6 +3000,9 @@ window.NP_BUSINESS_DATA = {
     },
     {
       "id": "additions-accountancy",
+      "aliases": [
+        "additions-accountancy-services"
+      ],
       "name": "Additions Accountancy",
       "category": "Professional Services",
       "specificCategory": "Accountants",

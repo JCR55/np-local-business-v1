@@ -7,10 +7,10 @@ window.NP_SITE = {
   productionUrl: "https://www.nplocalbusiness.co.uk",
   defaultShareImage: "assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg",
   nav: [
-    { label: "Home", href: "index.html" },
-    { label: "Categories", href: "categories.html" },
-    { label: "Locations", href: "locations.html" },
-    { label: "Join", href: "join.html" }
+    { label: "Home", href: "/" },
+    { label: "Categories", href: "/categories" },
+    { label: "Locations", href: "/locations" },
+    { label: "Join", href: "/join" }
   ],
   social: [
     { label: "Facebook", href: "https://www.facebook.com/nplocalbusiness" },
