@@ -540,7 +540,7 @@
       "location": "Cwmbran",
       "postcodeArea": "NP44",
       "shortDescription": "Traditional Croesyceiliog barbers offering professional men's haircuts and grooming in a relaxed local setting.",
-      "description": "T's The Traditional Barbers Shop, Croesyceiliog run by Peter Tomasulo has been providing men's styling and grooming to all ages for the past 29 years.\n\nOffering professional hair cuts in a relaxed friendly environment at competitive prices. ​\n\nWe also stock some of the leading men's hair and grooming products !\n\nMonday 09:00 - 18:00 Tuesday 09:00 - 18:00 Thursday 09:00 - 18:00 Friday 09:00 - 18:00 Saturday 08:40 - 16:00\n\nTo book an appointment please click the link below.\n\n**Booking is essential. Please be advised that T's Traditional Barbers is no longer accepting card payments. Cash only.**",
+      "description": "T's The Traditional Barbers Shop, Croesyceiliog run by Peter Tomasulo has been providing men's styling and grooming to all ages for the past 29 years.\n\nOffering professional hair cuts in a relaxed friendly environment at competitive prices. ​\n\nWe also stock some of the leading men's hair and grooming products.\n\n**Booking is essential. Please be advised that T's Traditional Barbers is no longer accepting card payments. Cash only.**",
       "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/t-s-traditional-barbers/t-s-traditional-barbers-hero-shop.jpg",
@@ -548,10 +548,10 @@
         "assets/images/businesses/t-s-traditional-barbers/t-s-traditional-barbers-gallery-interior.jpg"
       ],
       "services": [
-        "Men?s haircuts",
+        "Men's haircuts",
         "Traditional barbering",
         "Styling and grooming",
-        "Men?s grooming products",
+        "Men's grooming products",
         "Appointments",
         "Local barbershop service"
       ],

@@ -6,6 +6,8 @@
 }
 
 .profile-hero > img,
+.profile-hero > picture,
+.profile-hero > picture > img,
 .profile-hero__overlay {
   position: absolute;
   inset: 0;
@@ -13,7 +15,8 @@
   height: 100%;
 }
 
-.profile-hero > img {
+.profile-hero > img,
+.profile-hero > picture > img {
   object-fit: cover;
 }
 
@@ -106,25 +109,34 @@
 .profile-actions .button--primary,
 .contact-card__actions .button--primary,
 .profile-footer-cta .button--primary {
-  border-color: var(--np-green);
-  background: var(--np-green);
+  border-color: var(--np-red);
+  background: var(--np-red);
   color: #fff;
-  box-shadow: 0 16px 34px rgba(47, 143, 91, 0.24);
+  box-shadow: 0 16px 34px rgba(216, 52, 52, 0.28);
 }
 
 .profile-actions .button--primary:hover,
 .contact-card__actions .button--primary:hover,
 .profile-footer-cta .button--primary:hover {
-  background: #267a4c;
+  border-color: var(--np-red-dark);
+  background: var(--np-red-dark);
 }
 
 .profile-actions .button--light,
 .contact-card__actions .button--secondary,
 .profile-footer-cta .button--secondary {
-  border-color: rgba(255, 255, 255, 0.42);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--np-green);
+  background: var(--np-green);
   color: #fff;
+  box-shadow: 0 16px 34px rgba(47, 143, 91, 0.22);
   backdrop-filter: blur(8px);
+}
+
+.profile-actions .button--light:hover,
+.contact-card__actions .button--secondary:hover,
+.profile-footer-cta .button--secondary:hover {
+  border-color: #267a4c;
+  background: #267a4c;
 }
 
 .profile-trust-badges {
@@ -221,10 +233,10 @@
 
 .service-item {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  min-height: 92px;
-  padding: 15px;
+  min-height: 68px;
+  padding: 13px 15px;
   border: 1px solid rgba(7, 27, 51, 0.1);
   border-left: 3px solid rgba(216, 52, 52, 0.42);
   border-radius: 10px;
@@ -252,20 +264,12 @@
 
 .service-item__text {
   display: grid;
-  gap: 4px;
 }
 
 .service-item__text strong {
   color: var(--np-navy);
   font-size: 0.95rem;
   line-height: 1.2;
-}
-
-.service-item__text small {
-  color: var(--np-muted);
-  font-size: 0.82rem;
-  font-weight: 650;
-  line-height: 1.35;
 }
 
 @media (hover: hover) {
@@ -370,17 +374,26 @@
 
 .social-button {
   display: inline-flex;
-  min-height: 42px;
+  width: 100%;
+  min-height: 48px;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
-  border: 1px solid rgba(7, 27, 51, 0.12);
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 900;
+  letter-spacing: 0;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.social-button:hover {
+  border-color: rgba(255, 255, 255, 0.46);
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
 }
 
 .contact-list span {

@@ -37,6 +37,10 @@
   }
 
   function renderSeo() {
+    if (window.NP_SEO?.renderBusinessSeo) {
+      window.NP_SEO.renderBusinessSeo(business);
+      return;
+    }
     const description = business.shortDescription || `View ${business.name} on NP Local Business.`;
     const url = absoluteUrl(`business.html?id=${encodeURIComponent(business.id)}`);
     const image = absoluteUrl(profileImage(business.heroImage || business.logo || fallbackHero));
@@ -81,6 +85,23 @@
     return fallbackHero;
   }
 
+  function responsiveHeroImage() {
+    const banner = window.NP_RESPONSIVE_BANNERS?.[business.id];
+    const fallback = profileImage(business.heroImage);
+    const alt = imageAlt("heroImage", business.heroImage, `${business.name} hero image.`);
+    if (!banner?.desktop?.src || !banner?.tablet?.src || !banner?.mobile?.src) {
+      return `<img src="${window.NP.escapeHtml(fallback)}" alt="${window.NP.escapeHtml(alt)}" loading="eager" decoding="async" />`;
+    }
+    return `
+      <picture>
+        <source media="(max-width: 640px)" srcset="${window.NP.escapeHtml(banner.mobile.src)}" width="${Number(banner.mobile.width) || 768}" height="${Number(banner.mobile.height) || 960}" />
+        <source media="(max-width: 1024px)" srcset="${window.NP.escapeHtml(banner.tablet.src)}" width="${Number(banner.tablet.width) || 1280}" height="${Number(banner.tablet.height) || 720}" />
+        <source media="(min-width: 1025px)" srcset="${window.NP.escapeHtml(banner.desktop.src)}" width="${Number(banner.desktop.width) || 1920}" height="${Number(banner.desktop.height) || 800}" />
+        <img src="${window.NP.escapeHtml(fallback)}" alt="${window.NP.escapeHtml(alt)}" width="${Number(banner.desktop.width) || 1920}" height="${Number(banner.desktop.height) || 800}" loading="eager" decoding="async" />
+      </picture>
+    `;
+  }
+
   function externalAttrs(href) {
     return /^https?:\/\//i.test(String(href || "")) ? ' target="_blank" rel="noopener noreferrer"' : "";
   }
@@ -96,18 +117,7 @@
       .filter(Boolean);
     const fromHighlights = (business.highlights || [])
       .filter((item) => /newport|torfaen|monmouthshire|caerphilly|cwmbran|pontypool|risca|usk|caerleon|abergavenny/i.test(item));
-    const fallback = ["Newport", "Torfaen", "Monmouthshire", "Caerphilly"];
-    return Array.from(new Set([...base, ...fromHighlights, ...fallback])).slice(0, 6);
-  }
-
-  function serviceDescription(service) {
-    const text = String(service || "").toLowerCase();
-    if (/quote|estimate/.test(text)) return "Clear advice before you commit.";
-    if (/repair|service|maintenance/.test(text)) return "Reliable support when you need it.";
-    if (/install|fitting|supply/.test(text)) return "Supplied and handled with care.";
-    if (/collection|delivery/.test(text)) return "Practical local service across the area.";
-    if (/consult|advice/.test(text)) return "Helpful guidance from local specialists.";
-    return "Professional local service from a trusted NP business.";
+    return Array.from(new Set([...base, ...fromHighlights])).slice(0, 6);
   }
 
   function serviceIcon(service) {
@@ -179,7 +189,7 @@
     const caption = galleryCaption(image);
     const link = business.galleryLinks?.[image];
     const inner = `
-      <img src="${window.NP.escapeHtml(image)}" alt="${window.NP.escapeHtml(alt)}" />
+      <img src="${window.NP.escapeHtml(image)}" alt="${window.NP.escapeHtml(alt)}" loading="lazy" decoding="async" />
       ${caption ? `<span class="gallery-thumb__caption">${window.NP.escapeHtml(caption)}</span>` : ""}
     `;
     if (link?.href) {
@@ -246,7 +256,6 @@
                 <span class="service-item__icon">${window.NP.icon(serviceIcon(service))}</span>
                 <span class="service-item__text">
                   <strong>${window.NP.escapeHtml(service)}</strong>
-                  <small>${window.NP.escapeHtml(serviceDescription(service))}</small>
                 </span>
               </a>
             `
@@ -356,7 +365,7 @@
 
   root.innerHTML = `
     <section class="profile-hero">
-      <img src="${window.NP.escapeHtml(profileImage(business.heroImage))}" alt="${window.NP.escapeHtml(imageAlt("heroImage", business.heroImage, ""))}" />
+      ${responsiveHeroImage()}
       <div class="profile-hero__overlay"></div>
       <div class="profile-hero__content">
         ${profileReturnLink()}

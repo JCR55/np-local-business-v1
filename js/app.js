@@ -86,33 +86,6 @@
     return towns.includes(needle) ? needle : "";
   }
 
-  function normalizeReferralCode(value) {
-    return String(value || "")
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9-]/g, "")
-      .slice(0, 80);
-  }
-
-  function rememberReferralCode() {
-    const code = normalizeReferralCode(new URLSearchParams(location.search).get("ref"));
-    try {
-      if (code) {
-        localStorage.setItem("npReferralCode", code);
-        return code;
-      }
-      return normalizeReferralCode(localStorage.getItem("npReferralCode"));
-    } catch (error) {
-      return code;
-    }
-  }
-
-  const activeReferralCode = rememberReferralCode();
-
-  function getReferralCode() {
-    return activeReferralCode;
-  }
-
   function renderHeader() {
     const header = document.querySelector("[data-site-header]");
     if (!header) return;
@@ -304,7 +277,6 @@
     normalizeCategory,
     displayTown,
     knownTownSearch,
-    getReferralCode,
     businessProfileUrl,
     businessCard,
     renderCategoryCards,

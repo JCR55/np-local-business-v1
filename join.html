@@ -62,17 +62,21 @@
           <form class="join-form" name="np-local-business-join" method="POST" action="success.html" data-netlify="true" netlify-honeypot="bot-field" data-join-form>
             <input type="hidden" name="form-name" value="np-local-business-join" />
             <label class="visually-hidden">Leave this field empty<input name="bot-field" /></label>
-            <div class="referral-notice" data-referral-panel hidden>
-              <span>Referral applied</span>
-              <strong data-referral-name></strong>
-              <small>This referral will be included with your enquiry.</small>
-            </div>
             <input type="hidden" name="referralCode" data-referral-code-field />
             <input type="hidden" name="referralBusiness" data-referral-business-field />
+            <input type="hidden" name="referralMethod" data-referral-method-field value="none" />
+            <input type="hidden" name="referralDate" data-referral-date-field />
+            <input type="hidden" name="referralUrl" data-referral-url-field />
             <label><span>Business name</span><input name="businessName" required /></label>
             <label><span>Contact name</span><input name="contactName" required /></label>
             <label><span>Email</span><input name="email" type="email" required /></label>
+            <label><span>Telephone</span><input name="telephone" type="tel" /></label>
             <label><span>Category</span><input name="category" /></label>
+            <div class="form-group" data-offline-referral-group>
+              <p>Were you referred by an existing NP Local Business client?</p>
+              <label><span>Name of the business that referred you</span><input name="offlineReferralBusiness" data-offline-referral-field placeholder="Optional" /></label>
+              <small>Optional. This helps us thank existing clients who recommend NP Local Business.</small>
+            </div>
             <div class="form-group">
               <p>Online presence</p>
               <label><span>Website or social media links</span><textarea name="onlinePresence" rows="3" placeholder="Website, Facebook, Instagram or TikTok links"></textarea></label>
@@ -88,6 +92,7 @@
     <script src="data/site.js?v=20260720-launch-prep"></script>
     <script src="data/businesses.js?v=20260720-referral-codes"></script>
     <script src="js/app.js?v=20260720-referrals"></script>
+    <script src="js/seo.js?v=20260722-seo-foundation"></script>
     <script src="js/join.js?v=20260720-launch-prep"></script>
   </body>
 </html>
