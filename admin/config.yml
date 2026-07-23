@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: JCR55/np-local-business-v1
   branch: main
 
 media_folder: "assets/images"
