@@ -4,7 +4,7 @@
 
 The launch files currently use:
 
-`https://www.nplocalbusiness.co.uk`
+`https://www.newportlocalbusiness.co.uk`
 
 If your final domain is different, update it in:
 
@@ -58,7 +58,7 @@ Simplest first launch:
 3. Verify ownership.
 4. Submit:
 
-`https://www.nplocalbusiness.co.uk/sitemap.xml`
+`https://www.newportlocalbusiness.co.uk/sitemap.xml`
 
 5. Request indexing for:
 

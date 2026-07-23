@@ -4,7 +4,11 @@ window.NP_SITE = {
     strapline: "Trusted businesses across the NP postcode area",
     logo: "assets/images/brand/np-local-business-logo.png"
   },
-  productionUrl: "https://www.nplocalbusiness.co.uk",
+  productionUrl: "https://www.newportlocalbusiness.co.uk",
+  phone: {
+    display: "07738 057997",
+    href: "tel:+447738057997"
+  },
   defaultShareImage: "assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg",
   nav: [
     { label: "Home", href: "/" },

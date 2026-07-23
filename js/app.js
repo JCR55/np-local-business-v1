@@ -154,6 +154,7 @@
           <span class="brand-text"><strong>${site.brand.name}</strong><small>${site.brand.strapline}</small></span>
         </a>
         <p>Promoting trusted local businesses across the entire NP postcode area.</p>
+        <p class="site-footer__phone">Call us: <a href="${escapeHtml(site.phone.href)}">${escapeHtml(site.phone.display)}</a></p>
         ${socials ? `<div class="site-socials" aria-label="NP Local Business social links">${socials}</div>` : ""}
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">

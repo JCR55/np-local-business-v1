@@ -633,6 +633,21 @@ svg {
   color: rgba(255, 255, 255, 0.68);
 }
 
+.site-footer .site-footer__phone {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.site-footer__phone a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--np-red);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 .site-socials {
   display: flex;
   flex-wrap: wrap;

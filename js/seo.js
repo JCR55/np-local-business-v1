@@ -1,7 +1,7 @@
 (function () {
   const np = window.NP;
   const site = np?.site || window.NP_SITE || {};
-  const productionUrl = String(site.productionUrl || "https://www.nplocalbusiness.co.uk").replace(/\/$/, "");
+  const productionUrl = String(site.productionUrl || "https://www.newportlocalbusiness.co.uk").replace(/\/$/, "");
   const page = document.body?.dataset.page || "";
 
   function absoluteUrl(path) {

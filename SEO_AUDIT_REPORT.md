@@ -83,7 +83,7 @@ The new schema makes the site easier for AI search tools to understand:
 - Add `nplocalbusiness.co.uk` as the primary Netlify domain.
 - Enable HTTPS in Netlify.
 - Enable Netlify form detection and notification emails.
-- Submit `https://www.nplocalbusiness.co.uk/sitemap.xml` in Google Search Console.
+- Submit `https://www.newportlocalbusiness.co.uk/sitemap.xml` in Google Search Console.
 - Submit the same sitemap in Bing Webmaster Tools.
 - Set up Google Analytics or a privacy-friendly analytics option.
 - Create or claim business/social profiles for NP Local Business and keep NAP details consistent.
