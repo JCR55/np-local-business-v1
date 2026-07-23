@@ -2656,6 +2656,7 @@ window.NP_BUSINESS_DATA = {
       "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/cwmbran-carpet-centre/cwmbran-carpet-centre-hero-van.jpg",
+      "heroPosition": "right center",
       "gallery": [
         "assets/images/businesses/cwmbran-carpet-centre/cwmbran-carpet-centre-gallery-carpets.jpg",
         "assets/images/businesses/cwmbran-carpet-centre/cwmbran-carpet-centre-gallery-bespoke-rugs-runners.jpg",
@@ -3010,6 +3011,7 @@ window.NP_BUSINESS_DATA = {
       "featured": true,
       "verified": true,
       "heroImage": "assets/images/businesses/additions-accountancy/additions-accountancy-hero.png",
+      "heroPosition": "right center",
       "gallery": [
         "assets/images/businesses/additions-accountancy/additions-accountancy-gallery-office.jpg"
       ],

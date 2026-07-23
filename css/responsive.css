@@ -18,6 +18,52 @@
 }
 
 @media (max-width: 760px) {
+  .profile-hero {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    background: var(--np-navy);
+  }
+
+  .profile-hero .profile-hero__media {
+    position: static;
+    width: 100%;
+    height: clamp(260px, 68vw, 420px);
+    flex: 0 0 auto;
+    overflow: hidden;
+  }
+
+  .profile-hero[data-business-id="additions-accountancy"] .profile-hero__media,
+  .profile-hero[data-business-id="cwmbran-carpet-centre"] .profile-hero__media {
+    height: clamp(320px, 88vw, 420px);
+  }
+
+  .profile-hero .profile-hero__media > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--hero-position, center);
+  }
+
+  .profile-hero[data-business-id="cwmbran-carpet-centre"] .profile-hero__media > img {
+    transform: scale(1.42) translateX(7%);
+    transform-origin: 86% center;
+  }
+
+  .profile-hero .profile-hero__overlay {
+    display: none;
+  }
+
+  .profile-hero .profile-hero__content {
+    position: static;
+    min-height: 0;
+    width: 100%;
+    padding: 28px 18px 32px;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(47, 143, 91, 0.16), transparent 34%),
+      linear-gradient(145deg, #031020, #092441);
+  }
+
   .site-header {
     align-items: center;
     min-height: 82px;
@@ -167,6 +213,11 @@
   .profile-hero,
   .profile-hero__content {
     min-height: 580px;
+  }
+
+  .profile-hero,
+  .profile-hero .profile-hero__content {
+    min-height: 0;
   }
 
   .hero-stats,

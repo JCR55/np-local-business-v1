@@ -85,23 +85,6 @@
     return fallbackHero;
   }
 
-  function responsiveHeroImage() {
-    const banner = window.NP_RESPONSIVE_BANNERS?.[business.id];
-    const fallback = profileImage(business.heroImage);
-    const alt = imageAlt("heroImage", business.heroImage, `${business.name} hero image.`);
-    if (!banner?.desktop?.src || !banner?.tablet?.src || !banner?.mobile?.src) {
-      return `<img src="${window.NP.escapeHtml(fallback)}" alt="${window.NP.escapeHtml(alt)}" loading="eager" decoding="async" />`;
-    }
-    return `
-      <picture>
-        <source media="(max-width: 640px)" srcset="${window.NP.escapeHtml(banner.mobile.src)}" width="${Number(banner.mobile.width) || 768}" height="${Number(banner.mobile.height) || 960}" />
-        <source media="(max-width: 1024px)" srcset="${window.NP.escapeHtml(banner.tablet.src)}" width="${Number(banner.tablet.width) || 1280}" height="${Number(banner.tablet.height) || 720}" />
-        <source media="(min-width: 1025px)" srcset="${window.NP.escapeHtml(banner.desktop.src)}" width="${Number(banner.desktop.width) || 1920}" height="${Number(banner.desktop.height) || 800}" />
-        <img src="${window.NP.escapeHtml(fallback)}" alt="${window.NP.escapeHtml(alt)}" width="${Number(banner.desktop.width) || 1920}" height="${Number(banner.desktop.height) || 800}" loading="eager" decoding="async" />
-      </picture>
-    `;
-  }
-
   function externalAttrs(href) {
     return /^https?:\/\//i.test(String(href || "")) ? ' target="_blank" rel="noopener noreferrer"' : "";
   }
@@ -364,9 +347,11 @@
   renderSeo();
 
   root.innerHTML = `
-    <section class="profile-hero">
-      ${responsiveHeroImage()}
-      <div class="profile-hero__overlay"></div>
+    <section class="profile-hero" data-business-id="${window.NP.escapeHtml(business.id)}">
+      <div class="profile-hero__media">
+        <img src="${window.NP.escapeHtml(profileImage(business.heroImage))}" alt="${window.NP.escapeHtml(imageAlt("heroImage", business.heroImage, ""))}" style="--hero-position: ${window.NP.escapeHtml(business.heroPosition || "center")}" />
+        <div class="profile-hero__overlay"></div>
+      </div>
       <div class="profile-hero__content">
         ${profileReturnLink()}
         ${business.logo && isLocalImage(business.logo) ? `<img class="profile-logo" src="${window.NP.escapeHtml(business.logo)}" alt="${window.NP.escapeHtml(imageAlt("logo", business.logo, `${business.name} logo.`))}" />` : ""}

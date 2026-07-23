@@ -5,9 +5,7 @@
   color: #fff;
 }
 
-.profile-hero > img,
-.profile-hero > picture,
-.profile-hero > picture > img,
+.profile-hero__media,
 .profile-hero__overlay {
   position: absolute;
   inset: 0;
@@ -15,9 +13,16 @@
   height: 100%;
 }
 
-.profile-hero > img,
-.profile-hero > picture > img {
+.profile-hero__media > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: var(--hero-position, center);
+}
+
+.profile-hero,
+.profile-hero .profile-hero__content {
+  min-height: clamp(520px, 55vw, 680px);
 }
 
 .profile-hero__overlay {
