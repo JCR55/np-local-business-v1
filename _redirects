@@ -8,6 +8,35 @@
 /success.html                         /success             301!
 /404.html                             /404                 301!
 
+# Preserve established Google URLs from the previous website.
+/haven-mobility-cwmbran /haven-mobility 301!
+/jmg-roofing-south-wales /jmg-roofing-ltd 301!
+/torfaen-salvage-pontypool /torfaen-salvage 301!
+/ts-traditional-barbers /t-s-traditional-barbers 301!
+/marias-florist /maria-s-flowers 301!
+/andrew-jewellers-pontypool /andrews-jewellers 301!
+/mosswood-industrial-supplies-cwmbra /mosswood-industrial-supplies 301!
+/mg-carpets-rugs /mg-carpets-and-rugs 301!
+/irisbluecelebrancy /iris-blue-celebrancy 301!
+/springvale-mot-centre /springvale-mot-centre-cwmbran 301!
+/gazlocks-locksmith /gazlocks-locksmiths 301!
+/phillip-retter-car-sales /phil-retter-car-sales 301!
+/red-hat-printing-embriodery /red-hat-printing-and-embroidery 301!
+/murrays-minibus-hire /murray-s-minibus-hire 301!
+/cwmbran-curtains-blinds /cwmbran-curtains-and-blinds 301!
+/b-active-clinic /b-active-sports-massage-and-therapy 301!
+/little-computer-shop /the-little-computer-shop 301!
+/one-2-one-estate-agents /one2one-estate-agents-ltd 301!
+/windsor-wedding-car-hire-ponypool /windsor-wedding-car-hire 301!
+/er-simms-garage-doors /e-r-simms-garage-doors 301!
+/showroom-shine /showroom-shine-valeting-and-detailing 301!
+/man-cave-boy-zone /man-cave-and-boyzone 301!
+/brian-watkins-son-handyman /bryan-watkins-and-son-handyman-ltd 301!
+/carbodywork-specialists-cwmbran /car-body-work-specialists-ltd 301!
+/additions-accountancy-services /additions-accountancy 301!
+/gt-carpentry-joinery /gt-carpentry-and-joinery 301!
+/cwmbran-timber-diy /cwmbran-timber-and-diy-supplies 301!
+
 # Clean public-page rewrites for direct visits and browser refreshes.
 /categories                           /categories.html      200
 /locations                            /locations.html       200
