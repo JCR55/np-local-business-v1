@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
+# Displays ALL images inside assets/images in your Media Library
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
@@ -15,12 +16,3 @@ collections:
         fields:
           - { label: "Main Headline", name: "headline", widget: "string" }
           - { label: "Subheadline", name: "subheadline", widget: "text" }
-
-  - name: "businesses"
-    label: "Local Businesses"
-    folder: "assets/images/businesses"
-    extension: "png"
-    format: "raw"
-    create: true
-    fields:
-      - { label: "Logo / Image", name: "title", widget: "image" }
