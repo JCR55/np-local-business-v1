@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
+# Point directly to where your actual images live
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
@@ -18,12 +19,9 @@ collections:
 
   - name: "businesses"
     label: "Local Businesses"
-    folder: "assets/businesses"
-    nested: { depth: 2 } # Tells Decap to look inside subfolders!
-    format: "json"
+    folder: "assets/images/businesses"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Business Name", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Logo / Image", name: "image", widget: "image" }
