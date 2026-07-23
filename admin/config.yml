@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/
-public_folder: "/assets/
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "pages"
@@ -19,6 +19,7 @@ collections:
   - name: "businesses"
     label: "Local Businesses"
     folder: "assets/businesses"
+    nested: { depth: 2 } # Tells Decap to look inside subfolders!
     format: "json"
     create: true
     slug: "{{slug}}"
