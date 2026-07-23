@@ -4,6 +4,6 @@
     if (!form) return;
     event.preventDefault();
     const value = new FormData(form).get("q") || "";
-    window.location.href = `categories.html?q=${encodeURIComponent(value)}`;
+    window.location.href = `/categories?q=${encodeURIComponent(value)}`;
   });
 })();

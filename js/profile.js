@@ -1,6 +1,7 @@
 (async function () {
   const businesses = await window.NP.loadBusinesses();
-  const id = new URLSearchParams(location.search).get("id") || "south-wales-barbeques";
+  const pathSlug = decodeURIComponent(location.pathname.replace(/^\/+|\/+$/g, ""));
+  const id = new URLSearchParams(location.search).get("id") || pathSlug || "south-wales-barbeques";
   const business = businesses.find((item) => item.id === id || (item.aliases || []).includes(id)) || businesses[0];
   const root = document.querySelector("[data-profile-root]");
   const phone = business.contact.phone || "";
@@ -42,7 +43,7 @@
       return;
     }
     const description = business.shortDescription || `View ${business.name} on NP Local Business.`;
-    const url = absoluteUrl(`business.html?id=${encodeURIComponent(business.id)}`);
+    const url = absoluteUrl(business.id);
     const image = absoluteUrl(profileImage(business.heroImage || business.logo || fallbackHero));
     document.title = `${business.name} | ${window.NP.normalizeCategory(business)} | NP Local Business`;
     upsertCanonical(url);
@@ -135,7 +136,7 @@
     if (!rawReturn) return "";
     const href = rawReturn.trim();
     const page = href.split("?")[0];
-    if (!["categories.html", "locations.html"].includes(page)) return "";
+    if (!["/categories", "/locations"].includes(page)) return "";
 
     const query = href.includes("?") ? href.slice(href.indexOf("?") + 1) : "";
     const returnParams = new URLSearchParams(query);
@@ -149,7 +150,7 @@
       label = `Back to ${categoryName}`;
     } else if (searchQuery) {
       label = "Back to search results";
-    } else if (page === "locations.html") {
+    } else if (page === "/locations") {
       label = "Back to locations";
     }
 

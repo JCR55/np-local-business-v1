@@ -233,7 +233,7 @@
   }
 
   function renderBusinessSeo(business) {
-    const url = absoluteUrl(`business.html?id=${encodeURIComponent(business.id)}`);
+    const url = absoluteUrl(business.id);
     const image = absoluteUrl(business.heroImage || business.logo || site.defaultShareImage);
     const description = businessDescription(business);
     setShare({
@@ -250,7 +250,7 @@
         orgSchema(),
         breadcrumb([
           { name: "Home", url: `${productionUrl}/` },
-          { name: "Businesses", url: absoluteUrl("categories.html") },
+          { name: "Businesses", url: absoluteUrl("categories") },
           { name: business.name, url }
         ]),
         {
@@ -288,7 +288,7 @@
           publisher: { "@id": `${productionUrl}/#organization` },
           potentialAction: {
             "@type": "SearchAction",
-            target: `${productionUrl}/categories.html?q={search_term_string}`,
+            target: `${productionUrl}/categories?q={search_term_string}`,
             "query-input": "required name=search_term_string"
           }
         }
@@ -303,7 +303,7 @@
     const query = params.get("q") || params.get("location") || "";
     const category = params.get("category") || "";
     const filtered = np.filterBusinesses ? np.filterBusinesses(businesses, query, category) : businesses;
-    const url = absoluteUrl(kind === "locations" ? "locations.html" : "categories.html");
+    const url = absoluteUrl(kind === "locations" ? "locations" : "categories");
     const pageName = kind === "locations" ? "Locations" : "Categories";
     writeJsonLd(`${kind}-schema`, {
       "@context": "https://schema.org",
@@ -324,7 +324,7 @@
             itemListElement: filtered.slice(0, 100).map((business, index) => ({
               "@type": "ListItem",
               position: index + 1,
-              url: absoluteUrl(`business.html?id=${encodeURIComponent(business.id)}`),
+              url: absoluteUrl(business.id),
               name: business.name
             }))
           }
@@ -340,11 +340,11 @@
         orgSchema(),
         breadcrumb([
           { name: "Home", url: `${productionUrl}/` },
-          { name: "Join", url: absoluteUrl("join.html") }
+          { name: "Join", url: absoluteUrl("join") }
         ]),
         {
           "@type": "Service",
-          "@id": `${absoluteUrl("join.html")}#listing-service`,
+          "@id": `${absoluteUrl("join")}#listing-service`,
           name: "NP Local Business annual directory listing",
           serviceType: "Local business directory listing",
           provider: { "@id": `${productionUrl}/#organization` },
@@ -354,7 +354,7 @@
             price: "95",
             priceCurrency: "GBP",
             availability: "https://schema.org/InStock",
-            url: absoluteUrl("join.html"),
+            url: absoluteUrl("join"),
             description: "Annual NP Local Business membership including an SEO-friendly profile built and maintained by NP Local Business."
           }
         }

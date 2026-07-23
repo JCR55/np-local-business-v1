@@ -29,7 +29,7 @@
               .join("")}
             ${items.length > preview.length ? `<li class="location-card__more">More trusted businesses available</li>` : ""}
           </ul>
-          <a class="button button--secondary" href="categories.html?location=${encodeURIComponent(location)}">View businesses</a>
+          <a class="button button--secondary" href="/categories?location=${encodeURIComponent(location)}">View businesses</a>
         </article>
       `;
     })

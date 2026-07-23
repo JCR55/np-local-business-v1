@@ -39,7 +39,7 @@
       window.NP_BUSINESSES = Array.isArray(window.NP_BUSINESS_DATA) ? window.NP_BUSINESS_DATA : window.NP_BUSINESS_DATA.businesses || [];
       return window.NP_BUSINESSES;
     }
-    const response = await fetch("data/businesses.json");
+    const response = await fetch("/data/businesses.json");
     const data = await response.json();
     window.NP_BUSINESSES = data.businesses || [];
     return window.NP_BUSINESSES;
@@ -89,12 +89,12 @@
   function renderHeader() {
     const header = document.querySelector("[data-site-header]");
     if (!header) return;
-    const current = `${location.pathname.split("/").pop() || "index.html"}`;
+    const current = location.pathname || "/";
     const logoMarkup = site.brand.logo
       ? `<img class="brand-logo" src="${escapeHtml(site.brand.logo)}" alt="${escapeHtml(site.brand.name)} logo" />`
       : '<span class="brand-mark">NP</span>';
     header.innerHTML = `
-      <a class="brand" href="index.html" aria-label="${site.brand.name} home">
+      <a class="brand" href="/" aria-label="${site.brand.name} home">
         ${logoMarkup}
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -149,7 +149,7 @@
       : '<span class="brand-mark">NP</span>';
     footer.innerHTML = `
       <div>
-        <a class="brand brand--footer" href="index.html">
+        <a class="brand brand--footer" href="/">
           ${logoMarkup}
           <span class="brand-text"><strong>${site.brand.name}</strong><small>${site.brand.strapline}</small></span>
         </a>
@@ -163,11 +163,11 @@
   }
 
   function returnPathForCurrentPage() {
-    const currentPage = location.pathname.split("/").pop() || "index.html";
-    if (currentPage === "categories.html" && location.search) {
+    const currentPage = location.pathname || "/";
+    if (currentPage === "/categories" && location.search) {
       return `${currentPage}${location.search}`;
     }
-    if (currentPage === "locations.html") {
+    if (currentPage === "/locations") {
       return currentPage;
     }
     return "";
@@ -175,12 +175,12 @@
 
   function businessProfileUrl(id) {
     const params = new URLSearchParams();
-    params.set("id", id);
     const returnPath = returnPathForCurrentPage();
     if (returnPath) {
       params.set("return", returnPath);
     }
-    return `business.html?${params.toString()}`;
+    const query = params.toString();
+    return `/${encodeURIComponent(id)}${query ? `?${query}` : ""}`;
   }
 
   function businessCard(business) {
@@ -226,7 +226,7 @@
       })
       .map(
         (category) => `
-          <a class="category-card" href="categories.html?category=${encodeURIComponent(category.name)}">
+          <a class="category-card" href="/categories?category=${encodeURIComponent(category.name)}">
             <span class="category-card__icon">${icon(category.icon)}</span>
             <span class="category-card__count">Explore local options</span>
             <strong>${escapeHtml(category.name)}</strong>
