@@ -30,6 +30,80 @@ collections:
               - { label: "Full Description", name: "description", widget: "text" }
               - { label: "Featured", name: "featured", widget: "boolean", default: false }
               - { label: "Verified", name: "verified", widget: "boolean", default: false }
-
               - { label: "Hero Image (path)", name: "heroImage", widget: "string", required: false }
-              - { label: "Hero Position", name: "heroPosition", widget: "string",
+              - { label: "Hero Position", name: "heroPosition", widget: "string", required: false }
+              - { label: "Logo (path)", name: "logo", widget: "string", required: false }
+              - { label: "Card Image (path)", name: "cardImage", widget: "string", required: false }
+              - { label: "Card Image Fit", name: "cardImageFit", widget: "string", required: false }
+              - { label: "Logo Status", name: "logoStatus", widget: "string", required: false }
+              - { label: "Logo Source URL", name: "logoSourceUrl", widget: "string", required: false }
+- label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image path", name: "image", widget: "string" }
+              - { label: "Gallery Layout", name: "galleryLayout", widget: "string", required: false }
+              - label: "Gallery Captions"
+                name: "galleryCaptions"
+                widget: "keyvalue"
+                required: false
+                hint: "Key = image path, Value = caption text"
+              - label: "Image Alt Text"
+                name: "imageAlt"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Logo Alt", name: "logo", widget: "string", required: false }
+                  - { label: "Card Image Alt", name: "cardImage", widget: "string", required: false }
+                  - { label: "Hero Image Alt", name: "heroImage", widget: "string", required: false }
+                  - label: "Gallery Alt Text"
+                    name: "gallery"
+                    widget: "keyvalue"
+                    required: false
+                    hint: "Key = image path, Value = alt text"
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                required: false
+                field: { label: "Service", name: "service", widget: "string" }
+              - { label: "Services Source", name: "servicesSource", widget: "string", required: false }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                required: false
+                field: { label: "Highlight", name: "highlight", widget: "string" }
+                - label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image path", name: "image", widget: "string" }
+              - { label: "Gallery Layout", name: "galleryLayout", widget: "string", required: false }
+              - label: "Gallery Captions"
+                name: "galleryCaptions"
+                widget: "keyvalue"
+                required: false
+                hint: "Key = image path, Value = caption text"
+              - label: "Image Alt Text"
+                name: "imageAlt"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Logo Alt", name: "logo", widget: "string", required: false }
+                  - { label: "Card Image Alt", name: "cardImage", widget: "string", required: false }
+                  - { label: "Hero Image Alt", name: "heroImage", widget: "string", required: false }
+                  - label: "Gallery Alt Text"
+                    name: "gallery"
+                    widget: "keyvalue"
+                    required: false
+                    hint: "Key = image path, Value = alt text"
+              - label: "Services"
+                name: "services"
+                widget: "list"
+                required: false
+                field: { label: "Service", name: "service", widget: "string" }
+              - { label: "Services Source", name: "servicesSource", widget: "string", required: false }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                required: false
+                field: { label: "Highlight", name: "highlight", widget: "string" }
