@@ -1,1 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "business_data"
+    label: "Local Businesses"
+    files:
+      - label: "Businesses"
+        name: "businesses"
+        file: "data/businesses.json"
+        fields:
+          - label: "Businesses"
+            name: "businesses"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.location}}"
+            fields:
+              - { label: "ID (slug)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Specific Category", name: "specificCategory", widget: "string", required: false }
+              - { label: "Subcategory", name: "subcategory", widget: "string", required: false }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Postcode Area", name: "postcodeArea", widget: "string", required: false, default: "NP" }
+              - { label: "Town", name: "town", widget: "string", required: false }
+              - { label: "Short Description", name: "shortDescription", widget: "text" }
+              - { label: "Full Description", name: "description", widget: "text" }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+              - { label: "Verified", name: "verified", widget: "boolean", default: false }
+              - { label: "Hero Image (path)", name: "heroImage", widget: "string", required: false }
+              - { label: "Hero Position", name: "heroPosition", widget: "string", required: false }
+              - { label: "Logo (path)", name: "logo", widget: "string", required: false }
+              - { label: "Card Image (path)", name: "cardImage", widget: "string", required: false }
+              - { label: "Card Image Fit", name: "cardImageFit", widget: "string", required: false }
+              - { label: "Logo Status", name: "logoStatus", widget: "string", required: false }
+              - { label: "Logo Source URL", name: "logoSourceUrl", widget: "string", required: false }
+              - label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image path", name: "image", widget: "string" }
+              - { label: "Gallery Layout", name: "galleryLayout", widget: "string", required: false }
+              - label: "Gallery Captions"
+                name: "galleryCaptions"
+                widget: "keyvalue"
+                required: false
+                hint: "Key = image path, Value = caption text"
+              - label: "Image Alt Text"
+                name: "imageAlt"
+                widget: "object"
+                required: false
+                fields:
+                  - { label:
