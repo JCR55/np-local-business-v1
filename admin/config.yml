@@ -1,17 +1,3 @@
 backend:
-  name: github
-  repo: JCR55/np-local-business-v1
+  name: git-gateway
   branch: main
-
-media_folder: "assets/images"
-public_folder: "/assets/images"
-
-collections:
-  - name: "business_data"
-    label: "Local Businesses List"
-    files:
-      - label: "All Businesses"
-        name: "businesses"
-        file: "data/businesses.json"
-        fields:
-          - { label: "Business Data Content", name: "body", widget: "code", default_language: "json" }
