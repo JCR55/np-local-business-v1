@@ -43,7 +43,7 @@ collections:
                 name: "gallery"
                 widget: "list"
                 required: false
-                field: { label: "Image path", name: "image", widget: "string" }
+                field: { label: "Image path", name: "image", widget: "string", required: false }
               - { label: "Gallery Layout", name: "galleryLayout", widget: "string", required: false }
 
               - label: "Image Alt Text"
@@ -59,37 +59,37 @@ collections:
                 name: "services"
                 widget: "list"
                 required: false
-                field: { label: "Service", name: "service", widget: "string" }
+                field: { label: "Service", name: "service", widget: "string", required: false }
               - { label: "Services Source", name: "servicesSource", widget: "string", required: false }
 
               - label: "Highlights"
                 name: "highlights"
                 widget: "list"
                 required: false
-                field: { label: "Highlight", name: "highlight", widget: "string" }
+                field: { label: "Highlight", name: "highlight", widget: "string", required: false }
 
               - label: "Opening Hours"
                 name: "openingHours"
                 widget: "list"
                 required: false
-                field: { label: "Line", name: "line", widget: "string" }
+                field: { label: "Line", name: "line", widget: "string", required: false }
               - label: "On-Call Hours"
                 name: "onCallHours"
                 widget: "list"
                 required: false
-                field: { label: "Line", name: "line", widget: "string" }
+                field: { label: "Line", name: "line", widget: "string", required: false }
               - { label: "Payment Note", name: "paymentNote", widget: "string", required: false }
 
               - label: "Areas Covered"
                 name: "areasCovered"
                 widget: "list"
                 required: false
-                field: { label: "Area", name: "area", widget: "string" }
+                field: { label: "Area", name: "area", widget: "string", required: false }
               - label: "Aliases"
                 name: "aliases"
                 widget: "list"
                 required: false
-                field: { label: "Alias", name: "alias", widget: "string" }
+                field: { label: "Alias", name: "alias", widget: "string", required: false }
 
               - label: "Contact"
                 name: "contact"
