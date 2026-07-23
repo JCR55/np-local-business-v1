@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets"
-public_folder: "/assets"
+media_folder: "assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "pages"
@@ -15,3 +15,13 @@ collections:
         fields:
           - { label: "Main Headline", name: "headline", widget: "string" }
           - { label: "Subheadline", name: "subheadline", widget: "text" }
+
+  - name: "businesses"
+    label: "Local Businesses"
+    folder: "assets/businesses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Business Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
