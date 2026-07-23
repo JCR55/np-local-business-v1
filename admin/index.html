@@ -1,18 +1,12 @@
-backend:
-  name: git-gateway
-  branch: main # or master (your default GitHub branch)
-
-media_folder: "public/images" # Where uploaded images should go
-public_folder: "/images"      # How the images are linked in code
-
-collections:
-  - name: "pages"
-    label: "Pages"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "src/data/home.json" # Or whatever file holds your text/content
-        fields:
-          - { label: "Main Headline", name: "headline", widget: "string" }
-          - { label: "Subheadline", name: "subheadline", widget: "text" }
-          - { label: "Hero Image", name: "hero_image", widget: "image" }
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Manager</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
+</html>
