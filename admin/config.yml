@@ -46,12 +46,6 @@ collections:
                 field: { label: "Image path", name: "image", widget: "string" }
               - { label: "Gallery Layout", name: "galleryLayout", widget: "string", required: false }
 
-              - label: "Gallery Captions"
-                name: "galleryCaptions"
-                widget: "keyvalue"
-                required: false
-                hint: "Key = image path, Value = caption text"
-
               - label: "Image Alt Text"
                 name: "imageAlt"
                 widget: "object"
@@ -60,11 +54,6 @@ collections:
                   - { label: "Logo Alt", name: "logo", widget: "string", required: false }
                   - { label: "Card Image Alt", name: "cardImage", widget: "string", required: false }
                   - { label: "Hero Image Alt", name: "heroImage", widget: "string", required: false }
-                  - label: "Gallery Alt Text"
-                    name: "gallery"
-                    widget: "keyvalue"
-                    required: false
-                    hint: "Key = image path, Value = alt text"
 
               - label: "Services"
                 name: "services"
