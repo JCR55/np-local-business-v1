@@ -2,17 +2,15 @@ backend:
   name: git-gateway
   branch: main
 
-# Displays ALL images inside assets/images in your Media Library
 media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "business_data"
+    label: "Local Businesses List"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "data/home.json"
+      - label: "All Businesses"
+        name: "businesses"
+        file: "data/businesses.json"
         fields:
-          - { label: "Main Headline", name: "headline", widget: "string" }
-          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Business Data Content", name: "body", widget: "code", default_language: "json" }
