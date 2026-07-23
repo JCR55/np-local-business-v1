@@ -15,4 +15,4 @@ collections:
         editor:
           preview: false
         fields:
-          - { label: "Business Data Content", name: "body", widget: "code", default_language: "json" }
+          - { label: "Business Data Content", name: "businesses", widget: "code", default_language: "json" }
