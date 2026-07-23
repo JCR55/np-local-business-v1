@@ -1,0 +1,63 @@
+# Permanent redirects for legacy public URLs. Query-specific rules must come first.
+/business.html id=:id return=:return  /:id?return=:return  301!
+/business.html id=:id                 /:id                 301!
+/index.html                           /                    301!
+/categories.html                      /categories          301!
+/locations.html                       /locations           301!
+/join.html                            /join                301!
+/success.html                         /success             301!
+/404.html                             /404                 301!
+
+# Clean public-page rewrites for direct visits and browser refreshes.
+/categories                           /categories.html      200
+/locations                            /locations.html       200
+/join                                 /join.html            200
+/success                              /success.html         200
+/404                                  /404.html             200
+
+# Explicit business rewrites keep unknown root paths as genuine 404s.
+/haven-mobility /business.html?id=haven-mobility 200
+/jmg-roofing-ltd /business.html?id=jmg-roofing-ltd 200
+/beijing-house /business.html?id=beijing-house 200
+/dead-car-salvage /business.html?id=dead-car-salvage 200
+/torfaen-salvage /business.html?id=torfaen-salvage 200
+/ivanhoe-haulage /business.html?id=ivanhoe-haulage 200
+/cwmbran-digital-television-services /business.html?id=cwmbran-digital-television-services 200
+/t-s-traditional-barbers /business.html?id=t-s-traditional-barbers 200
+/maria-s-flowers /business.html?id=maria-s-flowers 200
+/andrews-jewellers /business.html?id=andrews-jewellers 200
+/jock-the-lock /business.html?id=jock-the-lock 200
+/mosswood-industrial-supplies /business.html?id=mosswood-industrial-supplies 200
+/mg-carpets-and-rugs /business.html?id=mg-carpets-and-rugs 200
+/iris-blue-celebrancy /business.html?id=iris-blue-celebrancy 200
+/springvale-mot-centre-cwmbran /business.html?id=springvale-mot-centre-cwmbran 200
+/groves-gas /business.html?id=groves-gas 200
+/gazlocks-locksmiths /business.html?id=gazlocks-locksmiths 200
+/phil-retter-car-sales /business.html?id=phil-retter-car-sales 200
+/red-hat-printing-and-embroidery /business.html?id=red-hat-printing-and-embroidery 200
+/murray-s-minibus-hire /business.html?id=murray-s-minibus-hire 200
+/pure-vans-ltd /business.html?id=pure-vans-ltd 200
+/frets-guitars /business.html?id=frets-guitars 200
+/goytre-car-company /business.html?id=goytre-car-company 200
+/cwmbran-curtains-and-blinds /business.html?id=cwmbran-curtains-and-blinds 200
+/b-active-sports-massage-and-therapy /business.html?id=b-active-sports-massage-and-therapy 200
+/the-little-computer-shop /business.html?id=the-little-computer-shop 200
+/happier-feet /business.html?id=happier-feet 200
+/one2one-estate-agents-ltd /business.html?id=one2one-estate-agents-ltd 200
+/windsor-wedding-car-hire /business.html?id=windsor-wedding-car-hire 200
+/beds-direct /business.html?id=beds-direct 200
+/cwmbran-door-centre /business.html?id=cwmbran-door-centre 200
+/e-r-simms-garage-doors /business.html?id=e-r-simms-garage-doors 200
+/showroom-shine-valeting-and-detailing /business.html?id=showroom-shine-valeting-and-detailing 200
+/man-cave-and-boyzone /business.html?id=man-cave-and-boyzone 200
+/bryan-watkins-and-son-handyman-ltd /business.html?id=bryan-watkins-and-son-handyman-ltd 200
+/cwmbran-carpet-centre /business.html?id=cwmbran-carpet-centre 200
+/caerleon-carpets /business.html?id=caerleon-carpets 200
+/car-body-work-specialists-ltd /business.html?id=car-body-work-specialists-ltd 200
+/south-wales-barbeques /business.html?id=south-wales-barbeques 200
+/south-wales-barbecues /business.html?id=south-wales-barbecues 200
+/station-garage-usk /business.html?id=station-garage-usk 200
+/additions-accountancy /business.html?id=additions-accountancy 200
+/additions-accountancy-services /business.html?id=additions-accountancy-services 200
+/gt-carpentry-and-joinery /business.html?id=gt-carpentry-and-joinery 200
+/cwmbran-timber-and-diy-supplies /business.html?id=cwmbran-timber-and-diy-supplies 200

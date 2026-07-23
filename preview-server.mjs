@@ -5,6 +5,10 @@ import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 3000);
+const businessData = JSON.parse(fs.readFileSync(path.join(root, "data", "businesses.json"), "utf8"));
+const businessSlugs = new Set(
+  (businessData.businesses || []).flatMap((business) => [business.id, ...(business.aliases || [])])
+);
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -22,8 +26,20 @@ const types = {
 };
 
 function resolveRequest(url = "/") {
-  const pathname = decodeURIComponent(url.split("?")[0] || "/");
-  const relative = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+  const parsed = new URL(url, "http://localhost");
+  const pathname = decodeURIComponent(parsed.pathname || "/");
+  const cleanPages = new Map([
+    ["/categories", "categories.html"],
+    ["/locations", "locations.html"],
+    ["/join", "join.html"],
+    ["/success", "success.html"],
+    ["/404", "404.html"],
+  ]);
+  let relative = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
+  if (cleanPages.has(pathname)) relative = cleanPages.get(pathname);
+  if (!path.extname(relative) && !relative.includes("/") && businessSlugs.has(relative)) {
+    relative = "business.html";
+  }
   const filePath = path.resolve(root, relative);
   if (!filePath.startsWith(root)) return null;
   return filePath;
@@ -31,6 +47,27 @@ function resolveRequest(url = "/") {
 
 http
   .createServer((request, response) => {
+    const parsed = new URL(request.url || "/", "http://localhost");
+    const legacyPages = new Map([
+      ["/index.html", "/"],
+      ["/categories.html", "/categories"],
+      ["/locations.html", "/locations"],
+      ["/join.html", "/join"],
+      ["/success.html", "/success"],
+      ["/404.html", "/404"],
+    ]);
+    if (parsed.pathname === "/business.html" && parsed.searchParams.get("id")) {
+      const id = parsed.searchParams.get("id");
+      const returnPath = parsed.searchParams.get("return");
+      response.writeHead(301, { Location: `/${encodeURIComponent(id)}${returnPath ? `?return=${encodeURIComponent(returnPath)}` : ""}` });
+      response.end();
+      return;
+    }
+    if (legacyPages.has(parsed.pathname)) {
+      response.writeHead(301, { Location: legacyPages.get(parsed.pathname) });
+      response.end();
+      return;
+    }
     const filePath = resolveRequest(request.url);
     if (!filePath) {
       response.writeHead(403);
