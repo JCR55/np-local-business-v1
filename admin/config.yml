@@ -7,12 +7,29 @@ public_folder: "/assets/images"
 
 collections:
   - name: "business_data"
-    label: "Local Businesses List"
+    label: "Local Businesses"
     files:
-      - label: "All Businesses"
+      - label: "Businesses"
         name: "businesses"
         file: "data/businesses.json"
-        editor:
-          preview: false
         fields:
-          - { label: "Business Data Content", name: "businesses", widget: "code", default_language: "json" }
+          - label: "Businesses"
+            name: "businesses"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.location}}"
+            fields:
+              - { label: "ID (slug)", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Specific Category", name: "specificCategory", widget: "string", required: false }
+              - { label: "Subcategory", name: "subcategory", widget: "string", required: false }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Postcode Area", name: "postcodeArea", widget: "string", required: false, default: "NP" }
+              - { label: "Town", name: "town", widget: "string", required: false }
+              - { label: "Short Description", name: "shortDescription", widget: "text" }
+              - { label: "Full Description", name: "description", widget: "text" }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+              - { label: "Verified", name: "verified", widget: "boolean", default: false }
+
+              - { label: "Hero Image (path)", name: "heroImage", widget: "string", required: false }
+              - { label: "Hero Position", name: "heroPosition", widget: "string",
