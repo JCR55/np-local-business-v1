@@ -8,7 +8,9 @@
 /success.html                         /success             301!
 /404.html                             /404                 301!
 
+
 # Preserve established Google URLs from the previous website.
+/advertise-with-us /join 301!
 /haven-mobility-cwmbran /haven-mobility 301!
 /jmg-roofing-south-wales /jmg-roofing-ltd 301!
 /torfaen-salvage-pontypool /torfaen-salvage 301!
@@ -36,6 +38,8 @@
 /additions-accountancy-services /additions-accountancy 301!
 /gt-carpentry-joinery /gt-carpentry-and-joinery 301!
 /cwmbran-timber-diy /cwmbran-timber-and-diy-supplies 301!
+/cy/cwmbran-timber-diy /cwmbran-timber-and-diy-supplies 301!
+
 
 # Clean public-page rewrites for direct visits and browser refreshes.
 /categories                           /categories.html      200
@@ -43,6 +47,7 @@
 /join                                 /join.html            200
 /success                              /success.html         200
 /404                                  /404.html             200
+
 
 # Explicit business rewrites keep unknown root paths as genuine 404s.
 /haven-mobility /business.html?id=haven-mobility 200
