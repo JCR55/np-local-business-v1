@@ -3004,13 +3004,24 @@ window.NP_BUSINESS_DATA = {
         "additions-accountancy-services"
       ],
       "name": "Additions Accountancy",
+      "alternateName": "Additions Accountancy Services",
+      "contactName": "Glyn Hewlett",
       "category": "Professional Services",
       "specificCategory": "Accountants",
       "subcategory": "Accountants",
       "location": "Cwmbran",
       "postcodeArea": "NP44",
-      "shortDescription": "Independent Cwmbran accountant offering tax, bookkeeping, self assessment and business support across Wales and the South West.",
-      "description": "Welcome to Additions Accountancy Services run by Glyn Hewlett, an independent accountant , offering a broad range of services. Based in Cwmbran, Torfaen, committed to providing the highest levels of service for our clients. We act as accountants, business consultants and tax advisors to individuals and small businesses throughout Wales and the South West\n\nWe offer a quality service with fixed rates that are VAT free. We don't charge for our initial consultations. We are willing to travel to your home or place of business at a mutual convenient time day or evening. Call Glyn Hewlett",
+      "seoTitle": "Additions Accountancy, Cwmbran | Accountant in Torfaen",
+      "seoDescription": "Additions Accountancy is an independent accountant run by Glyn Hewlett in Cwmbran, Torfaen. Accountancy, tax, CIS and self-assessment support for individuals and small businesses.",
+      "profileHeading": "Additions Accountancy – Accountant in Cwmbran",
+      "shortDescription": "Additions Accountancy is an independent accountancy practice run by Glyn Hewlett, based at 6 Cwrt Celyn, St Dials, Cwmbran, Torfaen, NP44 3FA.",
+      "description": "Additions Accountancy is an independent accountancy practice run by Glyn Hewlett, based at 6 Cwrt Celyn, St Dials, Cwmbran, Torfaen, NP44 3FA.\n\nWe offer accountancy, tax, CIS and self-assessment support for individuals and small businesses. Our quality service has fixed rates that are VAT free, and we do not charge for initial consultations. We can travel to your home or place of business at a mutually convenient time, day or evening.",
+      "areasCovered": [
+        "Cwmbran",
+        "Torfaen",
+        "Newport",
+        "South Wales"
+      ],
       "featured": true,
       "verified": true,
       "heroImage": "assets/images/businesses/additions-accountancy/additions-accountancy-hero.png",
@@ -3031,7 +3042,7 @@ window.NP_BUSINESS_DATA = {
         "Accountants",
         "Cwmbran"
       ],
-      "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/additions-accountancy-services",
+      "sourcePageUrl": "https://newportlocalbusiness.co.uk/additions-accountancy",
       "contact": {
         "phone": "07712 261411",
         "email": "",
