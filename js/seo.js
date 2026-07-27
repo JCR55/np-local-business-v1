@@ -1,7 +1,7 @@
 (function () {
   const np = window.NP;
   const site = np?.site || window.NP_SITE || {};
-  const productionUrl = String(site.productionUrl || "https://www.newportlocalbusiness.co.uk").replace(/\/$/, "");
+  const productionUrl = String(site.productionUrl || "https://www.nplocalbusiness.co.uk").replace(/\/$/, "");
   const page = document.body?.dataset.page || "";
 
   function absoluteUrl(path) {
@@ -140,6 +140,16 @@
   function postalAddress(business) {
     const raw = String(business.contact?.address || "").trim();
     if (!raw || /^https?:\/\//i.test(raw)) return undefined;
+    if (business.id === "additions-accountancy") {
+      return {
+        "@type": "PostalAddress",
+        streetAddress: "6 Cwrt Celyn, St Dials",
+        addressLocality: "Cwmbran",
+        addressRegion: "Torfaen",
+        postalCode: "NP44 3FA",
+        addressCountry: "United Kingdom"
+      };
+    }
     const town = np.displayTown ? np.displayTown(business) : business.location;
     return {
       "@type": "PostalAddress",
@@ -223,17 +233,19 @@
   function businessDescription(business) {
     const town = np.displayTown ? np.displayTown(business) : business.location;
     const category = np.normalizeCategory ? np.normalizeCategory(business) : business.category;
-    return business.shortDescription || `${business.name} is listed with NP Local Business for ${category || "local services"} in ${town || "the NP area"}.`;
+    return business.seoDescription || business.shortDescription || `${business.name} is listed with NP Local Business for ${category || "local services"} in ${town || "the NP area"}.`;
   }
 
   function businessTitle(business) {
     const town = np.displayTown ? np.displayTown(business) : business.location;
     const category = business.specificCategory || (np.normalizeCategory ? np.normalizeCategory(business) : business.category);
-    return [business.name, town, category].filter(Boolean).join(" | ") + " | NP Local Business";
+    return business.seoTitle || ([business.name, town, category].filter(Boolean).join(" | ") + " | NP Local Business");
   }
 
   function renderBusinessSeo(business) {
-    const url = absoluteUrl(business.id);
+    const url = business.id === "additions-accountancy"
+      ? "https://newportlocalbusiness.co.uk/additions-accountancy"
+      : absoluteUrl(business.id);
     const image = absoluteUrl(business.heroImage || business.logo || site.defaultShareImage);
     const description = businessDescription(business);
     setShare({
@@ -257,17 +269,24 @@
           "@type": schemaTypeForBusiness(business),
           "@id": `${url}#business`,
           name: business.name,
+          alternateName: business.alternateName,
           description,
           url,
           mainEntityOfPage: url,
           image: [business.heroImage, business.logo, ...(business.gallery || [])].filter(Boolean).slice(0, 6).map(absoluteUrl),
           logo: absoluteUrl(business.logo),
           telephone: business.contact?.phone,
+          founder: business.contactName ? {
+            "@type": "Person",
+            name: business.contactName
+          } : undefined,
           email: business.contact?.email,
           address: postalAddress(business),
           hasMap: business.contact?.googleMapsUrl,
           sameAs: Object.values(business.social || {}).filter(Boolean),
-          areaServed: businessAreas(business),
+          areaServed: business.areasCovered?.length
+            ? business.areasCovered.map((name) => ({ "@type": "Place", name }))
+            : businessAreas(business),
           openingHoursSpecification: openingHoursSpecification(business),
           hasOfferCatalog: serviceCatalog(business)
         }

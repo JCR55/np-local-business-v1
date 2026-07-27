@@ -357,7 +357,7 @@
         ${profileReturnLink()}
         ${business.logo && isLocalImage(business.logo) ? `<img class="profile-logo" src="${window.NP.escapeHtml(business.logo)}" alt="${window.NP.escapeHtml(imageAlt("logo", business.logo, `${business.name} logo.`))}" />` : ""}
         <p class="brand-kicker">${window.NP.escapeHtml(window.NP.normalizeCategory(business))} / ${window.NP.escapeHtml(business.postcodeArea)}</p>
-        <h1>${window.NP.escapeHtml(business.name)}</h1>
+        <h1>${window.NP.escapeHtml(business.profileHeading || business.name)}</h1>
         <p>${window.NP.escapeHtml(business.shortDescription)}</p>
         <div class="profile-actions">
           ${actionButtons("hero")}
