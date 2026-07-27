@@ -1,5 +1,6 @@
 # Permanent redirects for legacy public URLs. Query-specific rules must come first.
 /advertise-with-us                      /join 301!
+/showroom-shine                         /showroom-shine-valeting-and-detailing 301!
 /additions-accountancy-services          /additions-accountancy 301!
 /business.html id=:id return=:return  /:id?return=:return  301!
 /business.html id=:id                 /:id                 301!
