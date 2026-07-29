@@ -1282,8 +1282,7 @@
       "postcodeArea": "NP",
       "shortDescription": "Trusted domestic and commercial locksmith covering Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and nearby areas 24/7.",
       "description": "Gazlocks provides trusted domestic and commercial locksmith services across Cwmbran and the wider South Wales area. The business operates 24 hours a day, 365 days a year, supporting customers who need fast help with lockouts, lock changes and lock repairs.\n\nAs an independent local locksmith, Gazlocks aims to gain entry using non-destructive methods wherever possible. Customers can expect a fast, professional service with fixed prices and no hidden fees.\n\nGazlocks works with both home and business customers across Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and everywhere in between, providing reliable locksmith support when security, access and peace of mind matter most.",
-      "featured": true,
-      "featuredOrder": 7,
+      "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/gazlocks-locksmiths/gazlocks-locksmiths-hero.jpg",
       "gallery": [
@@ -1368,7 +1367,7 @@
       "seoDescription": "Panteg Vehicle Repairs in Griffithstown, Pontypool offers MOT testing, servicing, tyres, diagnostics, brakes, clutches, air conditioning and vehicle repairs.",
       "schemaType": "AutoRepair",
       "featured": true,
-      "featuredOrder": 2,
+      "featuredOrder": 3,
       "verified": true,
       "heroImage": "assets/images/businesses/panteg-vehicle-repairs-hero.png",
       "logo": "assets/images/businesses/panteg-vehicle-repairs-logo.png",
@@ -1795,7 +1794,7 @@
         "assets/images/businesses/frets-guitars/frets-guitars-gallery-02.jpg": "Guitars, accessories and repairs in Pontypool Market"
       },
       "referralCode": "frets-guitars",
-      "featuredOrder": 3
+      "featuredOrder": 4
     },
     {
       "id": "goytre-car-company",
@@ -2582,7 +2581,7 @@
       },
       "galleryLayout": "grid",
       "referralCode": "showroom-shine-valeting-and-detailing",
-      "featuredOrder": 1
+      "featuredOrder": 2
     },
     {
       "id": "man-cave-and-boyzone",
@@ -2658,7 +2657,7 @@
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.png": "Inside The Man Cave & Boyzone"
       },
       "referralCode": "man-cave-and-boyzone",
-      "featuredOrder": 4
+      "featuredOrder": 5
     },
     {
       "id": "bryan-watkins-and-son-handyman-ltd",
@@ -3026,7 +3025,7 @@
         "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-gallery-04.webp": "Barbeque showroom and product range"
       },
       "referralCode": "south-wales-barbeques",
-      "featuredOrder": 5
+      "featuredOrder": 6
     },
     {
       "id": "station-garage-usk",
@@ -3239,7 +3238,7 @@
       },
       "logo": "assets/images/businesses/gt-carpentry-and-joinery/gt-carpentry-and-joinery-logo.jpg",
       "referralCode": "gt-carpentry-and-joinery",
-      "featuredOrder": 6
+      "featuredOrder": 7
     },
     {
       "id": "cwmbran-timber-and-diy-supplies",
@@ -3344,7 +3343,8 @@
       "seoTitle": "Cwmbran Tuning & Service Centre | MOT & Garage Cwmbran",
       "seoDescription": "Cwmbran Tuning & Service Centre provides car and motorcycle MOT testing, servicing, diagnostics and repairs in Cwmbran. Call 01633 866 020.",
       "description": "Cwmbran Tuning & Service Centre is a friendly, professional garage serving motorists across Cwmbran, Pontypool, Newport and the surrounding areas.\n\nWith decades of combined experience, the qualified team provides dependable MOT testing, vehicle servicing, diagnostics and mechanical repairs for cars, vans, motorcycles and scooters.\n\nCustomers can expect honest advice, quality parts, reliable workmanship and competitive prices from an experienced local team.",
-      "featured": false,
+      "featured": true,
+      "featuredOrder": 1,
       "verified": true,
       "heroImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-hero.png",
       "heroPosition": "center",
