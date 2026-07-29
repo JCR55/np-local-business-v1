@@ -65,6 +65,13 @@
   padding: 10px;
 }
 
+.profile-hero .profile-logo--cover {
+  height: clamp(150px, 14vw, 180px);
+  object-fit: cover;
+  object-position: center;
+  padding: 8px;
+}
+
 .profile-hero p:not(.brand-kicker) {
   max-width: 660px;
   color: rgba(255, 255, 255, 0.9);
@@ -130,18 +137,18 @@
 .profile-actions .button--light,
 .contact-card__actions .button--secondary,
 .profile-footer-cta .button--secondary {
-  border-color: var(--np-green);
-  background: var(--np-green);
+  border-color: #087f8c;
+  background: #087f8c;
   color: #fff;
-  box-shadow: 0 16px 34px rgba(47, 143, 91, 0.22);
+  box-shadow: 0 16px 34px rgba(8, 127, 140, 0.24);
   backdrop-filter: blur(8px);
 }
 
 .profile-actions .button--light:hover,
 .contact-card__actions .button--secondary:hover,
 .profile-footer-cta .button--secondary:hover {
-  border-color: #267a4c;
-  background: #267a4c;
+  border-color: #066b76;
+  background: #066b76;
 }
 
 .profile-trust-badges {
