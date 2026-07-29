@@ -12,6 +12,7 @@
 
   document.querySelector("[data-featured-businesses]").innerHTML = businesses
     .filter((business) => business.featured)
+    .sort((a, b) => (a.featuredOrder || 999) - (b.featuredOrder || 999))
     .map(window.NP.businessCard)
     .join("");
 })();

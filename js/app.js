@@ -192,7 +192,9 @@
       cardImage === business.logo
         ? business.imageAlt?.logo || `${business.name} logo.`
         : business.imageAlt?.cardImage || `${business.name} business image.`;
-    const mediaClass = hasCardImage ? "business-card__media business-card__media--contain" : "business-card__media business-card__media--placeholder";
+    const mediaClass = hasCardImage
+      ? `business-card__media${business.cardImageFit === "cover" ? "" : " business-card__media--contain"}`
+      : "business-card__media business-card__media--placeholder";
     return `
       <article class="business-card">
         <a href="${escapeHtml(profileHref)}" class="${mediaClass}">

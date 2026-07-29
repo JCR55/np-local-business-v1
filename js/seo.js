@@ -112,6 +112,7 @@
   }
 
   function schemaTypeForBusiness(business) {
+    if (business.schemaType) return business.schemaType;
     const text = [business.name, business.category, business.specificCategory, business.subcategory, ...(business.services || [])]
       .join(" ")
       .toLowerCase();
@@ -283,7 +284,7 @@
           email: business.contact?.email,
           address: postalAddress(business),
           hasMap: business.contact?.googleMapsUrl,
-          sameAs: Object.values(business.social || {}).filter(Boolean),
+          sameAs: [business.contact?.website, ...Object.values(business.social || {})].filter(Boolean),
           areaServed: business.areasCovered?.length
             ? business.areasCovered.map((name) => ({ "@type": "Place", name }))
             : businessAreas(business),
