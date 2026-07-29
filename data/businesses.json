@@ -3328,6 +3328,91 @@
         "assets/images/businesses/cwmbran-timber-and-diy-supplies/cwmbran-timber-gallery-hand-tools.jpg": "Hand tools"
       },
       "referralCode": "cwmbran-timber-and-diy-supplies"
+    },
+    {
+      "id": "cwmbran-tuning-service-centre",
+      "name": "Cwmbran Tuning & Service Centre",
+      "alternateName": "Cwmbran Tuning & Service Centre Ltd",
+      "profileHeading": "Cwmbran Tuning & Service Centre",
+      "category": "Motoring & Transport",
+      "specificCategory": "Garage & MOT Centre",
+      "subcategory": "Garage & MOT Centre",
+      "schemaType": "AutoRepair",
+      "location": "Cwmbran",
+      "postcodeArea": "NP44",
+      "shortDescription": "MOT testing, servicing, diagnostics and reliable vehicle repairs for cars, vans and motorcycles.",
+      "seoTitle": "Cwmbran Tuning & Service Centre | MOT & Garage Cwmbran",
+      "seoDescription": "Cwmbran Tuning & Service Centre provides car and motorcycle MOT testing, servicing, diagnostics and repairs in Cwmbran. Call 01633 866 020.",
+      "description": "Cwmbran Tuning & Service Centre is a friendly, professional garage serving motorists across Cwmbran, Pontypool, Newport and the surrounding areas.\n\nWith decades of combined experience, the qualified team provides dependable MOT testing, vehicle servicing, diagnostics and mechanical repairs for cars, vans, motorcycles and scooters.\n\nCustomers can expect honest advice, quality parts, reliable workmanship and competitive prices from an experienced local team.",
+      "featured": false,
+      "verified": true,
+      "heroImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-hero.png",
+      "heroPosition": "center",
+      "gallery": [],
+      "services": [
+        "Car MOT testing",
+        "Motorcycle MOT testing",
+        "Car and van servicing",
+        "Motorcycle and scooter servicing",
+        "Engine diagnostics and tuning",
+        "Brake repairs",
+        "Clutch repairs and replacement",
+        "Exhaust repairs and replacement",
+        "Air-conditioning servicing",
+        "Fuel-injection diagnostics and repairs",
+        "Diesel fuel-injection repairs",
+        "Cylinder-head repairs",
+        "General vehicle repairs"
+      ],
+      "highlights": [
+        "Trusted local garage",
+        "Experienced and reliable",
+        "Serving Cwmbran, Pontypool and Newport"
+      ],
+      "areasCovered": [
+        "Cwmbran",
+        "Pontypool",
+        "Newport",
+        "Torfaen",
+        "South East Wales"
+      ],
+      "sourcePageUrl": "https://www.facebook.com/p/Cwmbran-Tuning-and-Service-Centre-100063718833819/",
+      "contact": {
+        "phone": "01633 866 020",
+        "email": "",
+        "website": "https://cwmbranmot.co.uk",
+        "address": "Unit 19, Forgehammer Industrial Estate, Cwmbran, Torfaen, NP44 3AA",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Unit%2019%20Forgehammer%20Industrial%20Estate%20Cwmbran%20NP44%203AA"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/p/Cwmbran-Tuning-and-Service-Centre-100063718833819/",
+        "instagram": "",
+        "tiktok": "",
+        "linkedin": "",
+        "youtube": ""
+      },
+      "logo": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-logo.png",
+      "cardImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-logo.png",
+      "cardImageFit": "contain",
+      "openingHours": {
+        "Monday": "8:30am - 5:30pm",
+        "Tuesday": "8:30am - 5:30pm",
+        "Wednesday": "8:30am - 5:30pm",
+        "Thursday": "8:30am - 5:30pm",
+        "Friday": "8:30am - 5:30pm",
+        "Saturday": "Closed",
+        "Sunday": "Closed"
+      },
+      "imageAlt": {
+        "logo": "Cwmbran Tuning & Service Centre logo and telephone number.",
+        "cardImage": "Cwmbran Tuning & Service Centre logo.",
+        "heroImage": "Black car and motorcycle inside a blue-lit vehicle workshop."
+      },
+      "aboutSource": "business-supplied",
+      "aboutUpdated": "2026-07-29",
+      "shortDescriptionSource": "curated-business-profile",
+      "servicesSource": "business-supplied",
+      "referralCode": "cwmbran-tuning-service-centre"
     }
   ]
 }
