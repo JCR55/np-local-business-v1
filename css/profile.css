@@ -73,11 +73,15 @@
 }
 
 .profile-hero[data-business-id="cwmbran-tuning-service-centre"] .profile-logo {
-  width: clamp(250px, 24vw, 330px);
-  height: clamp(145px, 15vw, 184px);
+  width: clamp(290px, 31vw, 420px);
+  height: clamp(160px, 17vw, 200px);
+  margin-top: -20px;
+  margin-bottom: 18px;
   padding: 0;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  clip-path: inset(12% 14.5% 15% 14.5% round 8px);
+  transform: scale(1.4);
 }
 
 .profile-hero p:not(.brand-kicker) {
