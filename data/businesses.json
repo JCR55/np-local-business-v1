@@ -1027,7 +1027,7 @@
       "postcodeArea": "NP",
       "shortDescription": "Warm, story-led celebrant services by Katie Thomas for weddings, naming ceremonies, fond farewells and meaningful life moments.",
       "description": "Hi, I am Katie Thomas. Welcome to Iris Blue Celebrancy. Bringing joy, offering support, listening to stories and sharing in life's special moments are just some of the things I love most.\n\nA celebrant-led wedding is all about you, your story, your style and your way. Unlike traditional ceremonies, the world is your oyster: you can choose a venue that speaks to your heart, from a windswept beach to a rustic barn, a woodland hideaway or your own backyard.\n\nNaming ceremonies celebrate newness amongst family and friends, marking the beginning of a journey and recognising identity. These ceremonies offer loved ones a heartfelt space to express their hopes, dreams and visions for the future.\n\nFond farewells are created with care at difficult moments. Katie will listen to your memories, support you through your grief and help create a farewell ceremony that truly reflects the love and connection you shared.\n\nLet's grab a cuppa and have a proper natter. I offer a complimentary, no-pressure introductory chat where we can swap stories and see if Iris Blue Celebrancy is the right fit for your day.",
-      "featured": true,
+      "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/iris-blue-celebrancy/iris-blue-celebrancy-hero-wedding-ceremony.jpg",
       "gallery": [
@@ -1281,7 +1281,7 @@
       "postcodeArea": "NP",
       "shortDescription": "Trusted domestic and commercial locksmith covering Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and nearby areas 24/7.",
       "description": "Gazlocks provides trusted domestic and commercial locksmith services across Cwmbran and the wider South Wales area. The business operates 24 hours a day, 365 days a year, supporting customers who need fast help with lockouts, lock changes and lock repairs.\n\nAs an independent local locksmith, Gazlocks aims to gain entry using non-destructive methods wherever possible. Customers can expect a fast, professional service with fixed prices and no hidden fees.\n\nGazlocks works with both home and business customers across Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and everywhere in between, providing reliable locksmith support when security, access and peace of mind matter most.",
-      "featured": true,
+      "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/gazlocks-locksmiths/gazlocks-locksmiths-hero.jpg",
       "gallery": [
@@ -1349,6 +1349,96 @@
         "assets/images/businesses/gazlocks-locksmiths/gazlocks-locksmiths-hero.jpg": "Domestic & Commercial Locksmith Services"
       },
       "referralCode": "gazlocks-locksmiths"
+    },
+    {
+      "id": "panteg-vehicle-repairs",
+      "name": "Panteg Vehicle Repairs",
+      "alternateName": "Panteg Vehicle Repairs at Panteg Service Station",
+      "category": "Motoring & Transport",
+      "specificCategory": "Garages",
+      "subcategory": "Garages",
+      "location": "Griffithstown",
+      "town": "Pontypool",
+      "postcodeArea": "NP4",
+      "shortDescription": "Griffithstown garage for MOTs, servicing, tyres, diagnostics and dependable vehicle repairs—all under one roof.",
+      "description": "Panteg Vehicle Repairs is a well-equipped local garage based at Panteg Service Station on Station Road, Griffithstown. The team provides practical, professional support for drivers across Pontypool and the surrounding area.\n\nFrom routine MOT testing and scheduled servicing to fault diagnostics and major mechanical work, customers can bring their vehicle to one convenient workshop. The garage works across essential systems including brakes, suspension, exhausts, batteries, air conditioning, clutches and timing belts.\n\nWhether your car needs regular maintenance, a fresh set of tyres or help with an unexpected warning light, Panteg Vehicle Repairs offers a straightforward local service focused on keeping you safely on the road.",
+      "seoTitle": "Panteg Vehicle Repairs | Pontypool Garage & MOT",
+      "seoDescription": "Panteg Vehicle Repairs in Griffithstown, Pontypool offers MOT testing, servicing, tyres, diagnostics, brakes, clutches, air conditioning and vehicle repairs.",
+      "schemaType": "AutoRepair",
+      "featured": true,
+      "featuredOrder": 2,
+      "verified": true,
+      "heroImage": "assets/images/businesses/panteg-vehicle-repairs-hero.png",
+      "logo": "assets/images/businesses/panteg-vehicle-repairs-logo.png",
+      "cardImage": "assets/images/businesses/panteg-vehicle-repairs-logo.png",
+      "cardImageFit": "cover",
+      "logoFit": "cover",
+      "gallery": [
+        "assets/images/businesses/panteg-vehicle-repairs-hero.png"
+      ],
+      "services": [
+        "MOT testing",
+        "Vehicle servicing",
+        "Tyres and wheel alignment",
+        "Brakes and suspension",
+        "Vehicle diagnostics and repairs",
+        "Air conditioning",
+        "Exhausts and batteries",
+        "Clutch replacement",
+        "Timing belt replacement",
+        "DPF cleaning"
+      ],
+      "highlights": [
+        "Trusted local garage",
+        "Complete vehicle care",
+        "Serving Griffithstown"
+      ],
+      "openingHours": [
+        "Monday: 8:30am - 5:30pm",
+        "Tuesday: 8:30am - 5:30pm",
+        "Wednesday: 8:30am - 5:30pm",
+        "Thursday: 8:30am - 5:30pm",
+        "Friday: 8:30am - 5:30pm",
+        "Saturday: 9:00am - 12:30pm",
+        "Sunday: Closed"
+      ],
+      "areasCovered": [
+        "Griffithstown",
+        "Pontypool",
+        "Torfaen",
+        "NP4 postcode area"
+      ],
+      "contact": {
+        "phone": "01495 755140",
+        "email": "mark@motazone.co.uk",
+        "website": "https://www.pantegservicestation.co.uk/",
+        "address": "Station Road, Griffithstown, Pontypool, NP4 5JH",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Panteg%20Vehicle%20Repairs%2C%20Station%20Road%2C%20Griffithstown%2C%20Pontypool%2C%20NP4%205JH"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/motazone",
+        "instagram": "",
+        "tiktok": "",
+        "linkedin": "",
+        "youtube": "https://www.youtube.com/watch?v=Zl1uMujVhsQ"
+      },
+      "sourcePageUrl": "https://www.pantegservicestation.co.uk/",
+      "aboutSource": "official-business-website",
+      "aboutUpdated": "2026-07-29",
+      "shortDescriptionSource": "official-business-website",
+      "servicesSource": "official-business-website",
+      "imageAlt": {
+        "logo": "Panteg Vehicle Repairs logo.",
+        "cardImage": "Panteg Vehicle Repairs logo.",
+        "heroImage": "Panteg Vehicle Repairs workshop on Station Road, Griffithstown.",
+        "gallery": {
+          "assets/images/businesses/panteg-vehicle-repairs-hero.png": "Panteg Vehicle Repairs workshop with servicing, brakes, repairs, tyres and MOT bays."
+        }
+      },
+      "galleryCaptions": {
+        "assets/images/businesses/panteg-vehicle-repairs-hero.png": "Panteg Vehicle Repairs workshop in Griffithstown"
+      },
+      "referralCode": "panteg-vehicle-repairs"
     },
     {
       "id": "phil-retter-car-sales",
@@ -1706,7 +1796,8 @@
       "galleryCaptions": {
         "assets/images/businesses/frets-guitars/frets-guitars-gallery-02.jpg": "Guitars, accessories and repairs in Pontypool Market"
       },
-      "referralCode": "frets-guitars"
+      "referralCode": "frets-guitars",
+      "featuredOrder": 3
     },
     {
       "id": "goytre-car-company",
@@ -2415,7 +2506,7 @@
       "postcodeArea": "NP44",
       "shortDescription": "Vehicle valeting and detailing specialist offering professional care for cars of all types and budgets.",
       "description": "A well-established business, Showroom Shine started out in 2016 and has built a strong reputation over the last 10 years.\n\nHaving a passion for vehicles going back far earlier, we have extensive experience in vehicle detailing, paint correction and automotive artwork.\n\nWe pride ourselves on our honesty, professionalism and willingness to help, regardless of the vehicle type or owner's budget.\n\nWhilst our personal passion is classic Ford vehicles, we appreciate that every car has a proud owner who only wants the best for their pride and joy.\n\nWe have solid knowledge of how paintwork or vehicle signage can make something look special, with work carried out in our purpose-built workshop.\n\nWith honest knowledge and advice, we can guide you in the right direction for whatever you require us to carry out on any mode of transport you may have.",
-      "featured": false,
+      "featured": true,
       "verified": true,
       "heroImage": "assets/images/businesses/showroom-shine-valeting-and-detailing/showroom-shine-valeting-and-detailing-hero-blue-car.jpg",
       "gallery": [
@@ -2492,7 +2583,8 @@
         "assets/images/businesses/showroom-shine-valeting-and-detailing/showroom-shine-gallery-signworks-vinyl-artwork.jpg": "Signworks vinyl and artwork services"
       },
       "galleryLayout": "grid",
-      "referralCode": "showroom-shine-valeting-and-detailing"
+      "referralCode": "showroom-shine-valeting-and-detailing",
+      "featuredOrder": 1
     },
     {
       "id": "man-cave-and-boyzone",
@@ -2567,7 +2659,8 @@
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-02.jpg": "Sports, games and collectables",
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.png": "Inside The Man Cave & Boyzone"
       },
-      "referralCode": "man-cave-and-boyzone"
+      "referralCode": "man-cave-and-boyzone",
+      "featuredOrder": 4
     },
     {
       "id": "bryan-watkins-and-son-handyman-ltd",
@@ -2579,7 +2672,7 @@
       "postcodeArea": "NP4",
       "shortDescription": "Long-established Pontypool DIY and building supplier stocking materials, tools and essentials for home and trade customers.",
       "description": "Your local DIY and BUILDING suppliers !\n\nBryan Watkins and Son 'Handyman' in Pontypool has been established for over 50 years and is your one stop shop for everything for everything for DIY or building ,decorating, plumbing, electrical, carpentry, glazier, roofing etc.\n\nWe cater for the home DIY to a new build house. We supply to individuals and companies. Below is just a selection of items we stock.\n\nPlywood, Plaster Board, Chip Board, Wall Boards, Conti Plas (White and Mahogany - colours to order) Mouldings\n\nBlocks, Sand, Cement, Plaster, Chippings etc.\n\nCladding, Fascia, Soffit, Window trims, Drainage etc.",
-      "featured": true,
+      "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/bryan-watkins-and-son-handyman-ltd/bryan-watkins-and-son-handyman-ltd-hero.png",
       "gallery": [
@@ -2934,7 +3027,8 @@
         "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-gallery-03.webp": "Premium barbeques and fuels",
         "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-gallery-04.webp": "Barbeque showroom and product range"
       },
-      "referralCode": "south-wales-barbeques"
+      "referralCode": "south-wales-barbeques",
+      "featuredOrder": 5
     },
     {
       "id": "station-garage-usk",
@@ -3022,7 +3116,7 @@
         "Newport",
         "South Wales"
       ],
-      "featured": true,
+      "featured": false,
       "verified": true,
       "heroImage": "assets/images/businesses/additions-accountancy/additions-accountancy-hero.png",
       "heroPosition": "right center",
@@ -3146,7 +3240,8 @@
         "assets/images/businesses/gt-carpentry-and-joinery/gt-carpentry-and-joinery-gallery-03.jpg": "Bespoke carpentry and timber finish"
       },
       "logo": "assets/images/businesses/gt-carpentry-and-joinery/gt-carpentry-and-joinery-logo.jpg",
-      "referralCode": "gt-carpentry-and-joinery"
+      "referralCode": "gt-carpentry-and-joinery",
+      "featuredOrder": 6
     },
     {
       "id": "cwmbran-timber-and-diy-supplies",
