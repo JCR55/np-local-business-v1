@@ -196,13 +196,16 @@
     const [featureImage, ...supportingImages] = uniqueGalleryItems;
     const isSingleImage = uniqueGalleryItems.length === 1;
     const useEvenGrid = business.galleryLayout === "grid" && uniqueGalleryItems.length > 1;
+    const galleryDescription = isSingleImage
+      ? "An image from the business, showing its premises, services or work."
+      : "Images from the business, including its premises, services and work.";
     return `
       <section class="profile-gallery-section" aria-labelledby="profile-gallery-title">
         <div class="profile-gallery-section__inner">
           <div>
-            <p class="brand-kicker">A closer look</p>
-            <h2 id="profile-gallery-title">An overview of what we do</h2>
-            <p class="profile-gallery-section__copy">A snapshot of ${window.NP.escapeHtml(business.name)}, our work and the details customers can expect.</p>
+            <p class="brand-kicker">Photos</p>
+            <h2 id="profile-gallery-title">A look at ${window.NP.escapeHtml(business.name)}</h2>
+            <p class="profile-gallery-section__copy">${galleryDescription}</p>
           </div>
           ${useEvenGrid ? `
           <div class="gallery gallery--even" aria-label="${window.NP.escapeHtml(business.name)} gallery images">
