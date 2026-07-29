@@ -1412,12 +1412,14 @@
       ],
       "contact": {
         "phone": "01495 755140",
-        "email": "mark@motazone.co.uk",
+        "email": "pantegreception@gmail.com",
         "website": "https://www.pantegservicestation.co.uk/",
         "address": "Station Road, Griffithstown, Pontypool, NP4 5JH",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Panteg%20Vehicle%20Repairs%2C%20Station%20Road%2C%20Griffithstown%2C%20Pontypool%2C%20NP4%205JH"
       },
-      "social": {},
+      "social": {
+        "facebook": "https://www.facebook.com/Pantegvehiclerepairs"
+      },
       "sourcePageUrl": "https://www.pantegservicestation.co.uk/",
       "aboutSource": "official-business-website",
       "aboutUpdated": "2026-07-29",
