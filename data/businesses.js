@@ -1027,7 +1027,8 @@ window.NP_BUSINESS_DATA = {
       "postcodeArea": "NP",
       "shortDescription": "Warm, story-led celebrant services by Katie Thomas for weddings, naming ceremonies, fond farewells and meaningful life moments.",
       "description": "Hi, I am Katie Thomas. Welcome to Iris Blue Celebrancy. Bringing joy, offering support, listening to stories and sharing in life's special moments are just some of the things I love most.\n\nA celebrant-led wedding is all about you, your story, your style and your way. Unlike traditional ceremonies, the world is your oyster: you can choose a venue that speaks to your heart, from a windswept beach to a rustic barn, a woodland hideaway or your own backyard.\n\nNaming ceremonies celebrate newness amongst family and friends, marking the beginning of a journey and recognising identity. These ceremonies offer loved ones a heartfelt space to express their hopes, dreams and visions for the future.\n\nFond farewells are created with care at difficult moments. Katie will listen to your memories, support you through your grief and help create a farewell ceremony that truly reflects the love and connection you shared.\n\nLet's grab a cuppa and have a proper natter. I offer a complimentary, no-pressure introductory chat where we can swap stories and see if Iris Blue Celebrancy is the right fit for your day.",
-      "featured": false,
+      "featured": true,
+      "featuredOrder": 8,
       "verified": true,
       "heroImage": "assets/images/businesses/iris-blue-celebrancy/iris-blue-celebrancy-hero-wedding-ceremony.jpg",
       "gallery": [
@@ -1281,7 +1282,8 @@ window.NP_BUSINESS_DATA = {
       "postcodeArea": "NP",
       "shortDescription": "Trusted domestic and commercial locksmith covering Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and nearby areas 24/7.",
       "description": "Gazlocks provides trusted domestic and commercial locksmith services across Cwmbran and the wider South Wales area. The business operates 24 hours a day, 365 days a year, supporting customers who need fast help with lockouts, lock changes and lock repairs.\n\nAs an independent local locksmith, Gazlocks aims to gain entry using non-destructive methods wherever possible. Customers can expect a fast, professional service with fixed prices and no hidden fees.\n\nGazlocks works with both home and business customers across Cwmbran, Newport, Pontypool, Cardiff, Abergavenny and everywhere in between, providing reliable locksmith support when security, access and peace of mind matter most.",
-      "featured": false,
+      "featured": true,
+      "featuredOrder": 7,
       "verified": true,
       "heroImage": "assets/images/businesses/gazlocks-locksmiths/gazlocks-locksmiths-hero.jpg",
       "gallery": [
@@ -1415,13 +1417,7 @@ window.NP_BUSINESS_DATA = {
         "address": "Station Road, Griffithstown, Pontypool, NP4 5JH",
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Panteg%20Vehicle%20Repairs%2C%20Station%20Road%2C%20Griffithstown%2C%20Pontypool%2C%20NP4%205JH"
       },
-      "social": {
-        "facebook": "https://www.facebook.com/motazone",
-        "instagram": "",
-        "tiktok": "",
-        "linkedin": "",
-        "youtube": "https://www.youtube.com/watch?v=Zl1uMujVhsQ"
-      },
+      "social": {},
       "sourcePageUrl": "https://www.pantegservicestation.co.uk/",
       "aboutSource": "official-business-website",
       "aboutUpdated": "2026-07-29",
