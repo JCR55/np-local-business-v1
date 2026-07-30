@@ -1,6 +1,21 @@
+# Use DecapBridge PKCE auth (required)
 backend:
   name: git-gateway
+  repo: JCR55/np-local-business-v1
   branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/bd6ce8a2-ce65-4417-b616-fbd9ecb1c579/pkce
+  auth_token_endpoint: /sites/bd6ce8a2-ce65-4417-b616-fbd9ecb1c579/token
+  gateway_url: https://gateway.decapbridge.com
+
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
