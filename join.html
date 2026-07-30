@@ -59,9 +59,12 @@
               <div class="site-socials site-socials--light" data-site-socials></div>
             </div>
           </div>
-          <form class="join-form" name="np-local-business-join" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" data-join-form>
-            <input type="hidden" name="form-name" value="np-local-business-join" />
-            <label class="visually-hidden">Leave this field empty<input name="bot-field" /></label>
+          <form class="join-form" name="np-local-business-join" method="POST" action="https://api.web3forms.com/submit" data-join-form>
+            <input type="hidden" name="access_key" value="21c61054-6f81-465f-ac25-5911b2dc1337" />
+            <input type="hidden" name="subject" value="New NP Local Business join enquiry" />
+            <input type="hidden" name="from_name" value="NP Local Business Website" />
+            <input type="hidden" name="redirect" value="https://www.newportlocalbusiness.co.uk/success" />
+            <input type="checkbox" name="botcheck" class="visually-hidden" style="display:none" tabindex="-1" autocomplete="off" />
             <input type="hidden" name="referralCode" data-referral-code-field />
             <input type="hidden" name="referralBusiness" data-referral-business-field />
             <input type="hidden" name="referralMethod" data-referral-method-field value="none" />
