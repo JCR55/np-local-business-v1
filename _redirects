@@ -5,8 +5,6 @@
 /b-active-clinic                       https://nplocalbusiness.co.uk/b-active-sports-massage-and-therapy 301
 /showroom-shine                         /showroom-shine-valeting-and-detailing 301
 /additions-accountancy-services          /additions-accountancy 301
-/business.html id=:id return=:return  /:id?return=:return  301
-/business.html id=:id                 /:id                 301
 /index.html                           /                    301
 /categories.html                      /categories          301
 /locations.html                       /locations           301
