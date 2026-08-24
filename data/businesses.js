@@ -1026,7 +1026,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Iris%20Blue%20Celebrancy%2C%20South%20Wales%2C%20Newport%2C%20NP%2C%20UK"
       },
       "shortDescription": "Warm, story-led celebrant services by Katie Thomas for weddings, naming ceremonies, fond farewells and meaningful life moments.",
-      "featuredOrder": 9,
+      "featuredOrder": 8,
       "heroImage": "assets/images/businesses/iris-blue-celebrancy/iris-blue-celebrancy-hero-wedding-ceremony.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/irisbluecelebrancy",
       "cardImageFit": "contain",
@@ -1361,7 +1361,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Panteg%20Vehicle%20Repairs%2C%20Station%20Road%2C%20Griffithstown%2C%20Pontypool%2C%20NP4%205JH"
       },
       "shortDescription": "Griffithstown garage for MOTs, servicing, tyres, diagnostics and dependable vehicle repairs—all under one roof.",
-      "featuredOrder": 4,
+      "featuredOrder": 3,
       "heroImage": "assets/images/businesses/panteg-vehicle-repairs-hero.png",
       "alternateName": "Panteg Vehicle Repairs at Panteg Service Station",
       "sourcePageUrl": "https://www.pantegservicestation.co.uk/",
@@ -1732,7 +1732,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Frets%20Guitars%2C%20Pontypool%20Market%2C%20Market%20St%2C%20Pontypool%2C%20Pontypool%2C%20NP%2C%20UK"
       },
       "shortDescription": "Pontypool guitar shop offering repairs, professional setups and handpicked sales with honest, careful service from owner Dave Holland.",
-      "featuredOrder": 5,
+      "featuredOrder": 4,
       "heroImage": "assets/images/businesses/frets-guitars/frets-guitars-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/frets-guitars",
       "cardImageFit": "contain",
@@ -2503,7 +2503,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Showroom%20Shine%20Valeting%20%26%20detailing%2C%20No%203%20Forgeside%2C%20Cwmbran%2C%20NP44%203LN%2C%20Cwmbran%2C%20NP44%2C%20UK"
       },
       "shortDescription": "Vehicle valeting and detailing specialist offering professional care for cars of all types and budgets.",
-      "featuredOrder": 3,
+      "featuredOrder": 2,
       "heroImage": "assets/images/businesses/showroom-shine-valeting-and-detailing/showroom-shine-valeting-and-detailing-hero-blue-car.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/showroom-shine",
       "aboutSource": "live-site",
@@ -2594,7 +2594,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Man%20Cave%20%26%20Boyzone%2C%20Pontypool%20Market%2C%20Pontypool%2C%20NP%2C%20UK"
       },
       "shortDescription": "Pontypool Market retailer offering gifts, fishing tackle, football and gaming accessories, gadgets, collectibles and hobby favourites.",
-      "featuredOrder": 6,
+      "featuredOrder": 5,
       "heroImage": "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/man-cave-boy-zone",
       "cardImageFit": "contain",
@@ -2961,7 +2961,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://maps.app.goo.gl/j2tqfEADHwk5gN5h7"
       },
       "shortDescription": "Specialist BBQ and log burner retailer in Cwmbran offering premium outdoor cooking equipment, fuels and expert advice.",
-      "featuredOrder": 7,
+      "featuredOrder": 6,
       "heroImage": "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-hero.png",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/south-wales-barbeques",
       "cardImageFit": "contain",
@@ -3180,7 +3180,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=GT%20Carpentry%20%26%20Joinery%2C%20Unit%206B%2C%20Greenmeadow%20Trading%20Est%2C%20Caerleon%2C%20Newport%2C%20NP18%203NY%2C%20Newport%2C%20NP18%2C%20UK"
       },
       "shortDescription": "Newport carpenter and joiner delivering bespoke carpentry, joinery and property improvements with over 23 years of experience.",
-      "featuredOrder": 8,
+      "featuredOrder": 7,
       "heroImage": "assets/images/businesses/gt-carpentry-and-joinery/gt-carpentry-and-joinery-hero-fitted-cabinetry.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/gt-carpentry-joinery",
       "cardImageFit": "contain",
@@ -3339,7 +3339,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Unit%2019%20Forgehammer%20Industrial%20Estate%20Cwmbran%20NP44%203AA"
       },
       "shortDescription": "MOT testing, servicing, diagnostics and reliable vehicle repairs for cars, vans and motorcycles.",
-      "featuredOrder": 2,
+      "featuredOrder": 1,
       "heroImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-hero.png",
       "heroPosition": "center",
       "alternateName": "Cwmbran Tuning & Service Centre Ltd",
@@ -3421,7 +3421,8 @@ window.NP_BUSINESS_DATA = {
         "phone": "07773 323 687",
         "email": "",
         "address": "Unit 6, Forgehammer Industrial Estate, Cwmbran, NP44 3AA",
-        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pets%20%40%20Rest%2C%20Unit%206%20Forgehammer%20Industrial%20Estate%2C%20Cwmbran%2C%20NP44%203AA"
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pets%20%40%20Rest%2C%20Unit%206%20Forgehammer%20Industrial%20Estate%2C%20Cwmbran%2C%20NP44%203AA",
+        "website": "https://www.petsatrestcremations.com/"
       },
       "shortDescription": "Independent pet crematorium in Cwmbran offering guaranteed individual cremation for dogs, cats and small pets, with ashes returned to you.",
       "heroImage": "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg",
@@ -3490,8 +3491,7 @@ window.NP_BUSINESS_DATA = {
         "Pet Services",
         "Pet Crematorium",
         "Cwmbran"
-      ],
-      "featuredOrder": 1
+      ]
     }
   ]
 };
