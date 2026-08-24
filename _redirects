@@ -31,6 +31,7 @@
 
 # Explicit business rewrites keep unknown root paths as genuine 404s.
 /haven-mobility /haven-mobility.html 200
+/pets-at-rest /pets-at-rest.html 200
 /jmg-roofing-ltd /jmg-roofing-ltd.html 200
 /beijing-house /beijing-house.html 200
 /dead-car-salvage /dead-car-salvage.html 200
