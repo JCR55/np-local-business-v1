@@ -36,14 +36,20 @@
       window.NP_BUSINESSES = Array.isArray(window.NP_BUSINESSES) ? window.NP_BUSINESSES : window.NP_BUSINESSES.businesses || [];
       return window.NP_BUSINESSES;
     }
-    if (window.NP_BUSINESS_DATA) {
-      window.NP_BUSINESSES = Array.isArray(window.NP_BUSINESS_DATA) ? window.NP_BUSINESS_DATA : window.NP_BUSINESS_DATA.businesses || [];
+    try {
+      const response = await fetch("/data/businesses.json");
+      const data = await response.json();
+      window.NP_BUSINESSES = data.businesses || [];
       return window.NP_BUSINESSES;
+    } catch (err) {
+      // Fallback only if the live fetch fails (e.g. offline) — businesses.js
+      // may be stale since Decap CMS only edits businesses.json directly.
+      if (window.NP_BUSINESS_DATA) {
+        window.NP_BUSINESSES = Array.isArray(window.NP_BUSINESS_DATA) ? window.NP_BUSINESS_DATA : window.NP_BUSINESS_DATA.businesses || [];
+        return window.NP_BUSINESSES;
+      }
+      throw err;
     }
-    const response = await fetch("/data/businesses.json");
-    const data = await response.json();
-    window.NP_BUSINESSES = data.businesses || [];
-    return window.NP_BUSINESSES;
   }
 
   function categoryCounts(businesses) {
