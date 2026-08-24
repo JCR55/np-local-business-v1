@@ -28,6 +28,7 @@ window.NP_SITE = {
     { name: "Health, Beauty & Lifestyle", icon: "heart", description: "Care, wellbeing, beauty and lifestyle businesses." },
     { name: "Shopping & Retail", icon: "shop", description: "Independent shops, gifts, products and local retail." },
     { name: "Professional Services", icon: "briefcase", description: "Local experts for business and personal advice." },
+    { name: "Pet Services", icon: "paw", description: "Pet care, cremation, grooming and animal-related services." },
   ],
   locations: ["Abergavenny", "Cwmbran", "Newport", "Pontypool", "Ponthir", "Usk", "NP area"],
   hero: {
