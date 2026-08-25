@@ -3448,7 +3448,9 @@ window.NP_BUSINESS_DATA = {
         "cardImage": "Pets @ Rest pet crematorium logo.",
         "heroImage": "Woman comforting her dog at sunset, representing the bond Pets @ Rest helps families honour.",
         "gallery": {
-          "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Woman comforting her dog at sunset, representing the bond Pets @ Rest helps families honour."
+          "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Woman comforting her dog at sunset, representing the bond Pets @ Rest helps families honour.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp": "Pets @ Rest reception area.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp": "Pets @ Rest waiting area."
         }
       },
       "specificCategory": "Pet Crematorium",
@@ -3457,7 +3459,9 @@ window.NP_BUSINESS_DATA = {
       ],
       "town": "Cwmbran",
       "gallery": [
-        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg"
+        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp"
       ],
       "location": "Cwmbran",
       "openingHours": [
@@ -3485,7 +3489,9 @@ window.NP_BUSINESS_DATA = {
       "category": "Pet Services",
       "subcategory": "Pet Cremation & Bereavement",
       "galleryCaptions": {
-        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Pets @ Rest — gentle, individual pet cremation care"
+        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Pets @ Rest — gentle, individual pet cremation care",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp": "Pets @ Rest reception area",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp": "Pets @ Rest waiting area"
       },
       "highlights": [
         "Pet Services",
