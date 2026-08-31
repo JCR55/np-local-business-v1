@@ -1,0 +1,10 @@
+{
+  "name": "np-local-business-v1",
+  "private": true,
+  "scripts": {
+    "prerender": "node scripts/prerender.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^30.0.1"
+  }
+}
