@@ -71,11 +71,42 @@ async function waitForRender(window, { timeoutMs = 10000, intervalMs = 25 } = {}
 }
 
 function spliceContainer(html, tagName, dataAttr, innerHtml) {
-  const re = new RegExp(`(<${tagName}\\b[^>]*\\b${dataAttr}\\b[^>]*>)([\\s\\S]*?)(</${tagName}>)`);
-  if (!re.test(html)) {
+  const openRe = new RegExp(`<${tagName}\\b[^>]*\\b${dataAttr}\\b[^>]*>`);
+  const openMatch = openRe.exec(html);
+  if (!openMatch) {
     throw new Error(`Could not find <${tagName} ${dataAttr}> container to splice into`);
   }
-  return html.replace(re, (_match, open, _inner, close) => `${open}${innerHtml}${close}`);
+  const contentStart = openMatch.index + openMatch[0].length;
+
+  // Find the matching closing tag by tracking nesting depth, rather than a
+  // simple non-greedy regex up to the next "</tagName>": several containers
+  // (e.g. the featured-businesses grid) hold same-tag descendants (nested
+  // <div>s inside each card), and a naive regex would stop at the first
+  // nested closing tag instead of the container's own, truncating the
+  // splice and leaving stale content behind it.
+  const tagRe = new RegExp(`<${tagName}\\b[^>]*>|</${tagName}>`, "g");
+  tagRe.lastIndex = contentStart;
+  let depth = 1;
+  let match;
+  while ((match = tagRe.exec(html))) {
+    if (match[0].startsWith("</")) {
+      depth -= 1;
+      if (depth === 0) {
+        return html.slice(0, contentStart) + innerHtml + match[0] + html.slice(match.index + match[0].length);
+      }
+    } else {
+      depth += 1;
+    }
+  }
+  throw new Error(`Could not find closing </${tagName}> for [${dataAttr}] container`);
+}
+
+function emptyContainers(html, containers) {
+  let result = html;
+  for (const [tagName, dataAttr] of containers) {
+    result = spliceContainer(result, tagName, dataAttr, "");
+  }
+  return result;
 }
 
 function withFetchPolyfill(window) {
@@ -98,36 +129,59 @@ async function waitForSelectorContent(window, selectors, { timeoutMs = 10000, in
   throw new Error(`Timed out waiting for content in: ${selectors.join(", ")}`);
 }
 
+const BUSINESS_CONTAINERS = [
+  ["header", "data-site-header"],
+  ["main", "data-profile-root"],
+  ["footer", "data-site-footer"],
+];
+
 async function prerenderBusiness(id, baseUrl) {
-  const pageUrl = `${baseUrl}/${encodeURIComponent(id)}`;
-  const dom = await JSDOM.fromURL(pageUrl, {
-    runScripts: "dangerously",
-    resources: "usable",
-    beforeParse: withFetchPolyfill,
-  });
+  const filePath = path.join(root, `${id}.html`);
+  const original = fs.readFileSync(filePath, "utf8");
+  const usesCrlf = original.includes("\r\n");
+
+  // Reset the containers to empty on disk before rendering. The local
+  // server reads fresh from disk on every request, so without this an
+  // already-prerendered page already has content in [data-profile-root]
+  // before the script even starts: waitForRender's "does it have an <h1>
+  // yet" check would pass instantly against that stale content instead of
+  // waiting for the real fetch-and-render to finish, so re-running the
+  // script wouldn't pick up data changes.
+  const empty = emptyContainers(original, BUSINESS_CONTAINERS);
+  fs.writeFileSync(filePath, empty);
 
   try {
-    await waitForRender(dom.window);
+    const pageUrl = `${baseUrl}/${encodeURIComponent(id)}`;
+    const dom = await JSDOM.fromURL(pageUrl, {
+      runScripts: "dangerously",
+      resources: "usable",
+      beforeParse: withFetchPolyfill,
+    });
 
-    const header = dom.window.document.querySelector("[data-site-header]");
-    const footer = dom.window.document.querySelector("[data-site-footer]");
-    const profileRoot = dom.window.document.querySelector("[data-profile-root]");
-    if (!header || !footer || !profileRoot) {
-      throw new Error("Missing one of [data-site-header] / [data-site-footer] / [data-profile-root]");
+    try {
+      await waitForRender(dom.window);
+
+      const header = dom.window.document.querySelector("[data-site-header]");
+      const footer = dom.window.document.querySelector("[data-site-footer]");
+      const profileRoot = dom.window.document.querySelector("[data-profile-root]");
+      if (!header || !footer || !profileRoot) {
+        throw new Error("Missing one of [data-site-header] / [data-site-footer] / [data-profile-root]");
+      }
+
+      let html = spliceContainer(empty, "header", "data-site-header", header.innerHTML);
+      html = spliceContainer(html, "main", "data-profile-root", profileRoot.innerHTML);
+      html = spliceContainer(html, "footer", "data-site-footer", footer.innerHTML);
+      // jsdom serializes innerHTML with bare "\n"; normalize the whole file back
+      // to the original file's line endings so the diff doesn't mix CRLF/LF.
+      if (usesCrlf) html = html.replace(/\r?\n/g, "\r\n");
+      fs.writeFileSync(filePath, html);
+    } finally {
+      dom.window.close();
     }
-
-    const filePath = path.join(root, `${id}.html`);
-    const original = fs.readFileSync(filePath, "utf8");
-    const usesCrlf = original.includes("\r\n");
-    let html = spliceContainer(original, "header", "data-site-header", header.innerHTML);
-    html = spliceContainer(html, "main", "data-profile-root", profileRoot.innerHTML);
-    html = spliceContainer(html, "footer", "data-site-footer", footer.innerHTML);
-    // jsdom serializes innerHTML with bare "\n"; normalize the whole file back
-    // to the original file's line endings so the diff doesn't mix CRLF/LF.
-    if (usesCrlf) html = html.replace(/\r?\n/g, "\r\n");
-    fs.writeFileSync(filePath, html);
-  } finally {
-    dom.window.close();
+  } catch (error) {
+    // Don't leave the file emptied out on disk if rendering failed partway.
+    fs.writeFileSync(filePath, original);
+    throw error;
   }
 }
 
@@ -181,29 +235,41 @@ const LISTING_PAGES = [
 ];
 
 async function prerenderListingPage({ file, waitFor, containers }, baseUrl) {
-  const pageUrl = `${baseUrl}/${file}`;
-  const dom = await JSDOM.fromURL(pageUrl, {
-    runScripts: "dangerously",
-    resources: "usable",
-    beforeParse: withFetchPolyfill,
-  });
+  const filePath = path.join(root, file);
+  const original = fs.readFileSync(filePath, "utf8");
+  const usesCrlf = original.includes("\r\n");
+
+  // See prerenderBusiness: reset containers to empty on disk first so an
+  // already-prerendered page still gives waitForSelectorContent a genuine
+  // empty -> populated transition to wait on.
+  const empty = emptyContainers(original, containers);
+  fs.writeFileSync(filePath, empty);
 
   try {
-    await waitForSelectorContent(dom.window, waitFor);
+    const pageUrl = `${baseUrl}/${file}`;
+    const dom = await JSDOM.fromURL(pageUrl, {
+      runScripts: "dangerously",
+      resources: "usable",
+      beforeParse: withFetchPolyfill,
+    });
 
-    const filePath = path.join(root, file);
-    const original = fs.readFileSync(filePath, "utf8");
-    const usesCrlf = original.includes("\r\n");
-    let html = original;
-    for (const [tag, dataAttr] of containers) {
-      const el = dom.window.document.querySelector(`[${dataAttr}]`);
-      if (!el) throw new Error(`Missing [${dataAttr}] in rendered DOM`);
-      html = spliceContainer(html, tag, dataAttr, el.innerHTML);
+    try {
+      await waitForSelectorContent(dom.window, waitFor);
+
+      let html = empty;
+      for (const [tag, dataAttr] of containers) {
+        const el = dom.window.document.querySelector(`[${dataAttr}]`);
+        if (!el) throw new Error(`Missing [${dataAttr}] in rendered DOM`);
+        html = spliceContainer(html, tag, dataAttr, el.innerHTML);
+      }
+      if (usesCrlf) html = html.replace(/\r?\n/g, "\r\n");
+      fs.writeFileSync(filePath, html);
+    } finally {
+      dom.window.close();
     }
-    if (usesCrlf) html = html.replace(/\r?\n/g, "\r\n");
-    fs.writeFileSync(filePath, html);
-  } finally {
-    dom.window.close();
+  } catch (error) {
+    fs.writeFileSync(filePath, original);
+    throw error;
   }
 }
 
