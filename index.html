@@ -26,7 +26,17 @@
   </head>
   <body data-page="home">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-site-header></header>
+    <header class="site-header" data-site-header>
+      <a class="brand" href="/" aria-label="NP Local Business home">
+        <img class="brand-logo" src="assets/images/brand/np-local-business-logo.png" alt="NP Local Business logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/categories">Categories</a><a href="/locations">Locations</a><a href="/join">Join</a>
+      </nav>
+    </header>
     <main id="main">
       <section class="home-hero" aria-labelledby="hero-title">
         <img class="home-hero__image" src="assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg" alt="Sugar Loaf mountain landscape near Abergavenny in the NP postcode area." />
@@ -34,13 +44,17 @@
         <div class="home-hero__content">
           <p class="brand-kicker">NP postcode business directory</p>
           <h1 id="hero-title">DISCOVER LOCAL. SUPPORT LOCAL.</h1>
-          <p data-hero-copy></p>
+          <p data-hero-copy>A trusted directory promoting independent businesses across the entire NP postcode area, from Newport and Cwmbran to Abergavenny, Monmouth and Chepstow.</p>
           <form class="directory-search directory-search--hero" data-search-form role="search">
             <label class="visually-hidden" for="home-search">Search businesses</label>
             <input id="home-search" name="q" type="search" placeholder="Search by business, category or location" />
             <button class="button button--primary" type="submit">Search</button>
           </form>
-          <div class="hero-stats" data-hero-stats></div>
+          <div class="hero-stats" data-hero-stats>
+    <span><strong>Trusted</strong> local businesses</span>
+    <span><strong>Curated</strong> local categories</span>
+    <span><strong>NP</strong> postcode area</span>
+  </div>
         </div>
       </section>
 
@@ -50,7 +64,63 @@
             <p class="brand-kicker">Explore by category</p>
             <h2 id="categories-title">Find trusted businesses across the NP area.</h2>
           </div>
-          <div class="category-grid" data-category-grid></div>
+          <div class="category-grid" data-category-grid>
+          <a class="category-card" href="/categories?category=Motoring%20%26%20Transport">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17h12"></path><path d="M5 17l1-6 2-4h8l2 4 1 6"></path><path d="M7 17v2"></path><path d="M17 17v2"></path><circle cx="8" cy="14" r="1"></circle><circle cx="16" cy="14" r="1"></circle></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Motoring &amp; Transport</strong>
+            <span>Vehicles, transport, haulage and local motoring support.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Home%20%26%20Garden">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7"></path><path d="M6 10v10h12V10"></path><path d="M10 20v-6h4v6"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Home &amp; Garden</strong>
+            <span>Home, garden, supplies and property services.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Trades%20%26%20Services">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 7 7 14"></path><path d="m5 16 3 3"></path><path d="m19 5-3 3"></path><path d="M14 5h5v5"></path><path d="M4 20l4-1 10-10-3-3L5 16Z"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Trades &amp; Services</strong>
+            <span>Trusted trades, repairs and practical local services.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Health%2C%20Beauty%20%26%20Lifestyle">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 8c0 6-8 11-8 11S4 14 4 8a4 4 0 0 1 7-2 4 4 0 0 1 9 2Z"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Health, Beauty &amp; Lifestyle</strong>
+            <span>Care, wellbeing, beauty and lifestyle businesses.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Shopping%20%26%20Retail">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16l-2-6H6Z"></path><path d="M6 10v10h12V10"></path><path d="M9 20v-5h6v5"></path><path d="M4 10c0 2 4 2 4 0 0 2 4 2 4 0 0 2 4 2 4 0 0 2 4 2 4 0"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Shopping &amp; Retail</strong>
+            <span>Independent shops, gifts, products and local retail.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Professional%20Services">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"></path><path d="M4 7h16v12H4Z"></path><path d="M4 12h16"></path><path d="M10 12v2h4v-2"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Professional Services</strong>
+            <span>Local experts for business and personal advice.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Food%20%26%20Drink">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8"></path><path d="M10 3v8"></path><path d="M8 3v18"></path><path d="M17 3v18"></path><path d="M14 3c3 2 4 6 3 10"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Food &amp; Drink</strong>
+            <span>Places to eat, drink, cater and celebrate.</span>
+          </a>
+        
+          <a class="category-card" href="/categories?category=Pet%20Services">
+            <span class="category-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="4" r="2"></circle><circle cx="18" cy="8" r="2"></circle><circle cx="20" cy="16" r="2"></circle><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"></path></svg></span>
+            <span class="category-card__count">Explore local options</span>
+            <strong>Pet Services</strong>
+            <span>Pet care, cremation, grooming and animal-related services.</span>
+          </a>
+        </div>
         </div>
       </section>
 
@@ -63,7 +133,151 @@
             </div>
             <a class="button button--secondary" href="/categories">View all categories</a>
           </div>
-          <div class="business-grid business-grid--featured" data-featured-businesses></div>
+          <div class="business-grid business-grid--featured" data-featured-businesses>
+      <article class="business-card">
+        <a href="/cwmbran-tuning-service-centre" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-logo.png" alt="Cwmbran Tuning &amp; Service Centre logo and telephone number." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Motoring &amp; Transport · NP44</p>
+          <h3><a href="/cwmbran-tuning-service-centre">Cwmbran Tuning &amp; Service Centre</a></h3>
+          <p>MOT testing, servicing, diagnostics and reliable vehicle repairs for cars, vans and motorcycles.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Cwmbran</span>
+            <a href="/cwmbran-tuning-service-centre">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/showroom-shine-valeting-and-detailing" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/showroom-shine-valeting-and-detailing/showroom-shine-valeting-and-detailing-logo.png" alt="Showroom Shine Valeting &amp; detailing logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Motoring &amp; Transport · NP44</p>
+          <h3><a href="/showroom-shine-valeting-and-detailing">Showroom Shine Valeting &amp; Detailing</a></h3>
+          <p>Vehicle valeting and detailing specialist offering professional care for cars of all types and budgets.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Cwmbran</span>
+            <a href="/showroom-shine-valeting-and-detailing">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/panteg-vehicle-repairs" class="business-card__media">
+          <img src="assets/images/businesses/panteg-vehicle-repairs-logo.png" alt="Panteg Vehicle Repairs logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Motoring &amp; Transport · NP4</p>
+          <h3><a href="/panteg-vehicle-repairs">Panteg Vehicle Repairs</a></h3>
+          <p>Griffithstown garage for MOTs, servicing, tyres, diagnostics and dependable vehicle repairs—all under one roof.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Pontypool</span>
+            <a href="/panteg-vehicle-repairs">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/frets-guitars" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/frets-guitars/frets-guitars-logo.png" alt="Frets Guitars logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Shopping &amp; Retail · NP</p>
+          <h3><a href="/frets-guitars">Frets Guitars</a></h3>
+          <p>Pontypool guitar shop offering repairs, professional setups and handpicked sales with honest, careful service from owner Dave Holland.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Pontypool</span>
+            <a href="/frets-guitars">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/man-cave-and-boyzone" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-logo.jpg" alt="Man Cave &amp; Boyzone logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Shopping &amp; Retail · NP</p>
+          <h3><a href="/man-cave-and-boyzone">Man Cave &amp; Boyzone</a></h3>
+          <p>Pontypool Market retailer offering gifts, fishing tackle, football and gaming accessories, gadgets, collectibles and hobby favourites.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Pontypool</span>
+            <a href="/man-cave-and-boyzone">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/south-wales-barbeques" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/south-wales-barbeques/south-wales-barbeques-logo.jpg" alt="South Wales Barbeques logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Home &amp; Garden · NP44</p>
+          <h3><a href="/south-wales-barbeques">South Wales Barbeques</a></h3>
+          <p>Specialist BBQ and log burner retailer in Cwmbran offering premium outdoor cooking equipment, fuels and expert advice.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Cwmbran</span>
+            <a href="/south-wales-barbeques">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/gt-carpentry-and-joinery" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/gt-carpentry-and-joinery/gt-carpentry-and-joinery-logo.jpg" alt="GT Carpentry &amp; Joinery logo engraved into wood." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Trades &amp; Services · NP18</p>
+          <h3><a href="/gt-carpentry-and-joinery">GT Carpentry &amp; Joinery</a></h3>
+          <p>Newport carpenter and joiner delivering bespoke carpentry, joinery and property improvements with over 23 years of experience.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Caerleon</span>
+            <a href="/gt-carpentry-and-joinery">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/iris-blue-celebrancy" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/iris-blue-celebrancy/iris-blue-celebrancy-logo-screenshot.jpg" alt="Iris Blue Celebrancy logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Health, Beauty &amp; Lifestyle · NP</p>
+          <h3><a href="/iris-blue-celebrancy">Iris Blue Celebrancy</a></h3>
+          <p>Warm, story-led celebrant services by Katie Thomas for weddings, naming ceremonies, fond farewells and meaningful life moments.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Newport</span>
+            <a href="/iris-blue-celebrancy">View profile</a>
+          </div>
+        </div>
+      </article>
+    
+      <article class="business-card">
+        <a href="/pets-at-rest" class="business-card__media business-card__media--contain">
+          <img src="assets/images/businesses/pets-at-rest/pets-at-rest-logo.jpg" alt="Pets @ Rest pet crematorium logo." loading="lazy">
+          <span class="verified">Verified</span>
+        </a>
+        <div class="business-card__body">
+          <p class="business-card__meta">Pet Services · NP</p>
+          <h3><a href="/pets-at-rest">Pets @ Rest</a></h3>
+          <p>Independent pet crematorium in Cwmbran offering guaranteed individual cremation for dogs, cats and small pets, with ashes returned to you.</p>
+          <div class="business-card__foot">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5 7-11a7 7 0 0 0-14 0c0 6 7 11 7 11Z"></path><circle cx="12" cy="10" r="2"></circle></svg>Cwmbran</span>
+            <a href="/pets-at-rest">View profile</a>
+          </div>
+        </div>
+      </article>
+    </div>
         </div>
       </section>
 
@@ -99,7 +313,30 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer" data-site-footer></footer>
+    <footer class="site-footer" data-site-footer>
+      <div>
+        <a class="brand brand--footer" href="/">
+          <img class="brand-logo brand-logo--footer" src="assets/images/brand/np-local-business-logo.png" alt="NP Local Business logo">
+          <span class="brand-text"><strong>NP Local Business</strong><small>Trusted businesses across the NP postcode area</small></span>
+        </a>
+        <p>Promoting trusted local businesses across the entire NP postcode area.</p>
+        <p class="site-footer__phone">Call us: <a href="tel:+447738057997">07738 057997</a></p>
+        <div class="site-socials" aria-label="NP Local Business social links">
+            <a class="site-socials__button site-socials__button--facebook" href="https://www.facebook.com/nplocalbusiness" target="_blank" rel="noopener noreferrer" aria-label="Open NP Local Business Facebook">
+              <span class="site-socials__icon" aria-hidden="true">F</span>
+              <span>Facebook</span>
+            </a>
+          
+            <a class="site-socials__button site-socials__button--instagram" href="https://www.instagram.com/nplocalbusiness/" target="_blank" rel="noopener noreferrer" aria-label="Open NP Local Business Instagram">
+              <span class="site-socials__icon" aria-hidden="true">I</span>
+              <span>Instagram</span>
+            </a>
+          </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a><a href="/categories">Categories</a><a href="/locations">Locations</a><a href="/join">Join</a>
+      </nav>
+    </footer>
     <script src="data/site.js?v=20260720-launch-prep"></script>
     <script src="js/app.js?v=20260729-panteg"></script>
      <script src="js/seo.js?v=20260729-panteg"></script>

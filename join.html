@@ -22,7 +22,17 @@
   </head>
   <body data-page="join">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-site-header></header>
+    <header class="site-header" data-site-header>
+      <a class="brand" href="/" aria-label="NP Local Business home">
+        <img class="brand-logo" src="assets/images/brand/np-local-business-logo.png" alt="NP Local Business logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span><span class="visually-hidden">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a><a href="/categories">Categories</a><a href="/locations">Locations</a><a href="/join">Join</a>
+      </nav>
+    </header>
     <main id="main">
       <section class="page-hero page-hero--image page-hero--join">
         <img src="assets/images/hero/join-cwmcarn-guardian.png" alt="Cwmcarn and Valleys landscape representing local businesses joining NP Local Business." />
@@ -91,7 +101,30 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer" data-site-footer></footer>
+    <footer class="site-footer" data-site-footer>
+      <div>
+        <a class="brand brand--footer" href="/">
+          <img class="brand-logo brand-logo--footer" src="assets/images/brand/np-local-business-logo.png" alt="NP Local Business logo">
+          <span class="brand-text"><strong>NP Local Business</strong><small>Trusted businesses across the NP postcode area</small></span>
+        </a>
+        <p>Promoting trusted local businesses across the entire NP postcode area.</p>
+        <p class="site-footer__phone">Call us: <a href="tel:+447738057997">07738 057997</a></p>
+        <div class="site-socials" aria-label="NP Local Business social links">
+            <a class="site-socials__button site-socials__button--facebook" href="https://www.facebook.com/nplocalbusiness" target="_blank" rel="noopener noreferrer" aria-label="Open NP Local Business Facebook">
+              <span class="site-socials__icon" aria-hidden="true">F</span>
+              <span>Facebook</span>
+            </a>
+          
+            <a class="site-socials__button site-socials__button--instagram" href="https://www.instagram.com/nplocalbusiness/" target="_blank" rel="noopener noreferrer" aria-label="Open NP Local Business Instagram">
+              <span class="site-socials__icon" aria-hidden="true">I</span>
+              <span>Instagram</span>
+            </a>
+          </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a><a href="/categories">Categories</a><a href="/locations">Locations</a><a href="/join">Join</a>
+      </nav>
+    </footer>
     <script src="data/site.js?v=20260720-launch-prep"></script>
      <script src="js/app.js?v=20260720-referrals"></script>
     <script src="js/seo.js?v=20260722-seo-foundation"></script>
