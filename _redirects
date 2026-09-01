@@ -1,5 +1,13 @@
 /admin /admin/ 301
 /admin/ /admin/index.html 200
+
+# Legacy URLs from the pre-Cloudflare (PHP/Wix) era, still indexed by Google, that now 404
+/browse_categories.php                  /categories 301
+/pure-vans-ltd-commercial-sales-and-leasing-newport-492.html /pure-vans-ltd 301
+/haven-mobility-cwmbran                 /haven-mobility 301
+/mobility-services                      /haven-mobility 301
+/red-hat-printing-embriodery            /red-hat-printing-and-embroidery 301
+
 /ts-traditional-barbers                 /t-s-traditional-barbers 301
 # Permanent redirects for legacy public URLs. Query-specific rules must come first.
 /advertise-with-us                      /join 301
