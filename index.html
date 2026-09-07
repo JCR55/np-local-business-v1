@@ -19,6 +19,39 @@
     <meta name="twitter:title" content="NP Local Business | Discover Local. Support Local." />
     <meta name="twitter:description" content="Discover trusted local businesses across the NP postcode area. Search local shops, trades, services and professional businesses across Newport, Cwmbran, Pontypool, Usk and nearby communities." />
     <meta name="twitter:image" content="https://www.newportlocalbusiness.co.uk/assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg" />
+    <script type="application/ld+json" id="site-schema">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://www.newportlocalbusiness.co.uk/#organization",
+            "name": "NP Local Business",
+            "url": "https://www.newportlocalbusiness.co.uk/",
+            "logo": "https://www.newportlocalbusiness.co.uk/assets/images/brand/np-local-business-logo.png",
+            "description": "A trusted directory promoting independent businesses across the NP postcode area, from Newport and Cwmbran to Abergavenny, Monmouth and Chepstow.",
+            "telephone": "+44 7738 057997",
+            "areaServed": { "@type": "Place", "name": "NP postcode area" },
+            "sameAs": [
+              "https://www.facebook.com/nplocalbusiness",
+              "https://www.instagram.com/nplocalbusiness/"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.newportlocalbusiness.co.uk/#website",
+            "url": "https://www.newportlocalbusiness.co.uk/",
+            "name": "NP Local Business",
+            "publisher": { "@id": "https://www.newportlocalbusiness.co.uk/#organization" },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.newportlocalbusiness.co.uk/categories?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
     <link rel="preload" href="assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg" as="image" />
     <link rel="stylesheet" href="css/main.css?v=20260720-launch-prep" />
     <link rel="stylesheet" href="css/homepage.css?v=20260720-home-spacing" />
