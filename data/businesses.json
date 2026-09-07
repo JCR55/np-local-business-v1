@@ -405,7 +405,7 @@
       "aboutSource": "live-site",
       "verified": true,
       "referralCode": "ivanhoe-haulage",
-      "logo": "assets/images/businesses/ivanhoe-haulage/ivanhoe-haulage-logo.png",
+      "logo": "assets/images/businesses/ivanhoe-haulage/ivanhoe-haulage-logo.jpg",
       "name": "Ivanhoe Haulage",
       "social": {
         "facebook": "",
@@ -698,14 +698,14 @@
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Andrews%20Jewellers%2C%2030%20George%20Street%2C%20Pontypool%2C%20Torfaen%2C%20NP4%206BY%2C%20Pontypool%2C%20NP4%2C%20UK"
       },
       "shortDescription": "Family-run Pontypool jewellers offering jewellery, watch and clock sales, repairs, engraving and ear piercing.",
-      "heroImage": "assets/images/businesses/andrews-jewellers/andrews-jewellers-hero.png",
+      "heroImage": "assets/images/businesses/andrews-jewellers/andrews-jewellers-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/andrew-jewellers-pontypool",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
       "verified": true,
       "referralCode": "andrews-jewellers",
-      "cardImage": "assets/images/businesses/andrews-jewellers/andrews-jewellers-logo-premium.png",
-      "logo": "assets/images/businesses/andrews-jewellers/andrews-jewellers-logo-premium.png",
+      "cardImage": "assets/images/businesses/andrews-jewellers/andrews-jewellers-logo-premium.jpg",
+      "logo": "assets/images/businesses/andrews-jewellers/andrews-jewellers-logo-premium.jpg",
       "name": "Andrews Jewellers",
       "social": {
         "facebook": "https://www.facebook.com/profile.php?id=61586462530862",
@@ -1362,7 +1362,7 @@
       },
       "shortDescription": "Griffithstown garage for MOTs, servicing, tyres, diagnostics and dependable vehicle repairs—all under one roof.",
       "featuredOrder": 3,
-      "heroImage": "assets/images/businesses/panteg-vehicle-repairs-hero.png",
+      "heroImage": "assets/images/businesses/panteg-vehicle-repairs-hero.jpg",
       "alternateName": "Panteg Vehicle Repairs at Panteg Service Station",
       "sourcePageUrl": "https://www.pantegservicestation.co.uk/",
       "logoFit": "cover",
@@ -1370,8 +1370,8 @@
       "aboutSource": "official-business-website",
       "verified": true,
       "referralCode": "panteg-vehicle-repairs",
-      "cardImage": "assets/images/businesses/panteg-vehicle-repairs-logo.png",
-      "logo": "assets/images/businesses/panteg-vehicle-repairs-logo.png",
+      "cardImage": "assets/images/businesses/panteg-vehicle-repairs-logo.jpg",
+      "logo": "assets/images/businesses/panteg-vehicle-repairs-logo.jpg",
       "name": "Panteg Vehicle Repairs",
       "social": {
         "facebook": "https://www.facebook.com/Pantegvehiclerepairs"
@@ -1383,7 +1383,7 @@
         "cardImage": "Panteg Vehicle Repairs logo.",
         "heroImage": "Panteg Vehicle Repairs workshop on Station Road, Griffithstown.",
         "gallery": {
-          "assets/images/businesses/panteg-vehicle-repairs-hero.png": "Panteg Vehicle Repairs workshop with servicing, brakes, repairs, tyres and MOT bays."
+          "assets/images/businesses/panteg-vehicle-repairs-hero.jpg": "Panteg Vehicle Repairs workshop with servicing, brakes, repairs, tyres and MOT bays."
         }
       },
       "specificCategory": "Garages",
@@ -1395,7 +1395,7 @@
       ],
       "town": "Pontypool",
       "gallery": [
-        "assets/images/businesses/panteg-vehicle-repairs-hero.png"
+        "assets/images/businesses/panteg-vehicle-repairs-hero.jpg"
       ],
       "location": "Griffithstown",
       "openingHours": [
@@ -1429,7 +1429,7 @@
       "category": "Motoring & Transport",
       "subcategory": "Garages",
       "galleryCaptions": {
-        "assets/images/businesses/panteg-vehicle-repairs-hero.png": "Panteg Vehicle Repairs workshop in Griffithstown"
+        "assets/images/businesses/panteg-vehicle-repairs-hero.jpg": "Panteg Vehicle Repairs workshop in Griffithstown"
       },
       "highlights": [
         "Trusted local garage",
@@ -1956,7 +1956,7 @@
       "aboutSource": "live-site",
       "verified": true,
       "referralCode": "b-active-sports-massage-and-therapy",
-      "cardImage": "assets/images/businesses/b-active-sports-massage-and-therapy/b-active-sports-massage-and-therapy-hero.png",
+      "cardImage": "assets/images/businesses/b-active-sports-massage-and-therapy/b-active-sports-massage-and-therapy-hero.jpg",
       "logo": "assets/images/businesses/b-active-sports-massage-and-therapy/b-active-sports-massage-and-therapy-logo.png",
       "name": "B Active Sports Massage & Therapy",
       "social": {
@@ -2298,7 +2298,7 @@
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beds%20Direct%2C%20Ponthir%20Road%2C%20Caerleon%2C%20Newport%2C%20NP18%203NY%2C%20Newport%2C%20NP18%2C%20UK"
       },
       "shortDescription": "Caerleon showroom offering a large range of quality beds, mattresses and bedroom furniture with efficient delivery options.",
-      "heroImage": "assets/images/businesses/beds-direct/beds-direct-hero.png",
+      "heroImage": "assets/images/businesses/beds-direct/beds-direct-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/beds-direct",
       "aboutSource": "live-site",
       "verified": true,
@@ -2373,7 +2373,7 @@
       "verified": true,
       "referralCode": "cwmbran-door-centre",
       "cardImage": "assets/images/businesses/cwmbran-door-centre/cwmbran-door-centre-logo-pending.svg",
-      "logo": "assets/images/businesses/cwmbran-door-centre/cwmbran-door-centre-logo.png",
+      "logo": "assets/images/businesses/cwmbran-door-centre/cwmbran-door-centre-logo.jpg",
       "name": "Cwmbran Door Centre",
       "social": {
         "facebook": "https://www.facebook.com/profile.php?id=100057592984034",
@@ -2440,7 +2440,7 @@
       "verified": true,
       "referralCode": "e-r-simms-garage-doors",
       "cardImage": "assets/images/businesses/e-r-simms-garage-doors/e-r-simms-garage-doors-gallery-01.jpg",
-      "logo": "assets/images/businesses/e-r-simms-garage-doors/e-r-simms-garage-doors-logo.png",
+      "logo": "assets/images/businesses/e-r-simms-garage-doors/e-r-simms-garage-doors-logo.jpg",
       "name": "E.R Simms Garage Doors",
       "social": {
         "facebook": "",
@@ -2621,7 +2621,7 @@
           "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-hero.jpg": "Man Cave & Boyzone premises or featured business image.",
           "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-01.jpg": "Man Cave & Boyzone gallery.",
           "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-02.jpg": "Man Cave & Boyzone gallery.",
-          "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.png": "Man Cave & Boyzone gallery."
+          "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.jpg": "Man Cave & Boyzone gallery."
         }
       },
       "specificCategory": "Gift Shops",
@@ -2629,7 +2629,7 @@
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-hero.jpg",
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-01.jpg",
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-02.jpg",
-        "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.png"
+        "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.jpg"
       ],
       "location": "Pontypool",
       "servicesSource": "client-website-user-provided",
@@ -2653,7 +2653,7 @@
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-hero.jpg": "Pontypool market shopfront",
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-01.jpg": "Gifts, hobby items and market retail products",
         "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-02.jpg": "Sports, games and collectables",
-        "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.png": "Inside The Man Cave & Boyzone"
+        "assets/images/businesses/man-cave-and-boyzone/man-cave-and-boyzone-gallery-03.jpg": "Inside The Man Cave & Boyzone"
       },
       "highlights": [
         "Shopping & Retail",
@@ -2670,7 +2670,7 @@
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bryan%20Watkins%20%26%20Son%20Handyman%20Ltd%2C%2016%20Osborne%20Road%2C%20Pontypool%2C%20Torfaen%2C%20NP4%206LU%2C%20Pontypool%2C%20NP4%2C%20UK"
       },
       "shortDescription": "Long-established Pontypool DIY and building supplier stocking materials, tools and essentials for home and trade customers.",
-      "heroImage": "assets/images/businesses/bryan-watkins-and-son-handyman-ltd/bryan-watkins-and-son-handyman-ltd-hero.png",
+      "heroImage": "assets/images/businesses/bryan-watkins-and-son-handyman-ltd/bryan-watkins-and-son-handyman-ltd-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/brian-watkins-son-handyman",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
@@ -2814,7 +2814,7 @@
         "secondaryPhone": "07566 231742"
       },
       "shortDescription": "Caerleon carpet and flooring specialist offering carpets, vinyl flooring, artificial grass and home measuring services.",
-      "heroImage": "assets/images/businesses/caerleon-carpets/caerleon-carpets-hero.png",
+      "heroImage": "assets/images/businesses/caerleon-carpets/caerleon-carpets-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/caerleon-carpets",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
@@ -2962,7 +2962,7 @@
       },
       "shortDescription": "Specialist BBQ and log burner retailer in Cwmbran offering premium outdoor cooking equipment, fuels and expert advice.",
       "featuredOrder": 6,
-      "heroImage": "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-hero.png",
+      "heroImage": "assets/images/businesses/south-wales-barbeques/south-wales-barbeques-hero.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/south-wales-barbeques",
       "cardImageFit": "contain",
       "verified": true,
@@ -3100,7 +3100,7 @@
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=6%20Cwrt%20Celyn%2C%20St%20Dials%2C%20Cwmbran%2C%20Torfaen%2C%20NP44%203FA"
       },
       "shortDescription": "Additions Accountancy is an independent accountancy practice run by Glyn Hewlett, based at 6 Cwrt Celyn, St Dials, Cwmbran, Torfaen, NP44 3FA.",
-      "heroImage": "assets/images/businesses/additions-accountancy/additions-accountancy-hero.png",
+      "heroImage": "assets/images/businesses/additions-accountancy/additions-accountancy-hero.jpg",
       "heroPosition": "right center",
       "alternateName": "Additions Accountancy Services",
       "sourcePageUrl": "https://newportlocalbusiness.co.uk/additions-accountancy",
@@ -3340,7 +3340,7 @@
       },
       "shortDescription": "MOT testing, servicing, diagnostics and reliable vehicle repairs for cars, vans and motorcycles.",
       "featuredOrder": 1,
-      "heroImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-hero.png",
+      "heroImage": "assets/images/businesses/cwmbran-tuning-service-centre/cwmbran-tuning-service-centre-hero.jpg",
       "heroPosition": "center",
       "alternateName": "Cwmbran Tuning & Service Centre Ltd",
       "sourcePageUrl": "https://www.facebook.com/p/Cwmbran-Tuning-and-Service-Centre-100063718833819/",

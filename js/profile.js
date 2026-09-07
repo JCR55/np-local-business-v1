@@ -6,7 +6,7 @@
   const root = document.querySelector("[data-profile-root]");
   const phone = business.contact.phone || "";
   const cleanPhone = phone.replace(/\s/g, "");
-  const fallbackHero = "assets/images/hero/sugar-loaf-abergavenny-panoramic.png";
+  const fallbackHero = "assets/images/hero/sugar-loaf-abergavenny-panoramic.jpg";
 
   document.title = `${business.name} | NP Local Business`;
 
