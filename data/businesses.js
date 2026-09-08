@@ -2127,7 +2127,9 @@ window.NP_BUSINESS_DATA = {
         "Clinic appointments",
         "Home visits",
         "Diabetic foot support",
-        "General foot pain support"
+        "General foot pain support",
+        "Laser therapy",
+        "Skin surgery"
       ],
       "category": "Health, Beauty & Lifestyle",
       "subcategory": "Chiropodists",
