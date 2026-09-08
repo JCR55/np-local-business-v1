@@ -1191,7 +1191,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Groves%20Gas%2C%2025%20Court%20Road%20Industrial%20Estate%2C%20Cwmbran%2C%20NP44%203AS%2C%20Cwmbran%2C%20NP44%2C%20UK"
       },
       "shortDescription": "Family-centred gas, plumbing and heating specialists in Cwmbran, focused on safety, quality and customer-first service.",
-      "heroImage": "assets/images/businesses/groves-gas/groves-gas-hero-showroom.jpg",
+      "heroImage": "assets/images/businesses/groves-gas/groves-gas-showroom.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/groves-gas",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
