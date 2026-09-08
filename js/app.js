@@ -163,11 +163,20 @@
         <p>Promoting trusted local businesses across the entire NP postcode area.</p>
         <p class="site-footer__phone">Call us: <a href="${escapeHtml(site.phone.href)}">${escapeHtml(site.phone.display)}</a></p>
         ${socials ? `<div class="site-socials" aria-label="NP Local Business social links">${socials}</div>` : ""}
+        ${(site.legalNav || []).length ? `<p class="site-footer__legal">${site.legalNav.map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join(" · ")}</p>` : ""}
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         ${site.nav.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
       </nav>
     `;
+  }
+
+  function loadCookieConsent() {
+    // Loaded here (rather than a <script> tag on every page) so the banner
+    // applies site-wide from this one shared, already-included script.
+    const script = document.createElement("script");
+    script.src = "/js/cookie-consent.js";
+    document.body.appendChild(script);
   }
 
   function returnPathForCurrentPage() {
@@ -277,6 +286,7 @@
   renderHeader();
   renderFooter();
   renderSiteSocials();
+  loadCookieConsent();
 
   window.NP = {
     site,

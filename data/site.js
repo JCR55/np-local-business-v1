@@ -16,6 +16,9 @@ window.NP_SITE = {
     { label: "Locations", href: "/locations" },
     { label: "Join", href: "/join" }
   ],
+  legalNav: [
+    { label: "Privacy Policy", href: "/privacy-policy" }
+  ],
   social: [
     { label: "Facebook", href: "https://www.facebook.com/nplocalbusiness" },
     { label: "Instagram", href: "https://www.instagram.com/nplocalbusiness/" }

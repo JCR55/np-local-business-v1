@@ -232,6 +232,24 @@ const LISTING_PAGES = [
       ["footer", "data-site-footer"],
     ],
   },
+  {
+    file: "privacy-policy.html",
+    // Static legal copy; only header/footer are JS-rendered on this page.
+    waitFor: ["[data-site-header]"],
+    containers: [
+      ["header", "data-site-header"],
+      ["footer", "data-site-footer"],
+    ],
+  },
+  {
+    file: "cookie-policy.html",
+    // Static legal copy; only header/footer are JS-rendered on this page.
+    waitFor: ["[data-site-header]"],
+    containers: [
+      ["header", "data-site-header"],
+      ["footer", "data-site-footer"],
+    ],
+  },
 ];
 
 async function prerenderListingPage({ file, waitFor, containers }, baseUrl) {

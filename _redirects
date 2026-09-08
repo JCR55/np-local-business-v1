@@ -25,6 +25,8 @@
 /join.html                            /join                301
 /success.html                         /success             301
 /404.html                             /404                 301
+/privacy-policy.html                  /privacy-policy      301
+/cookie-policy.html                   /cookie-policy       301
 
 
 
@@ -35,6 +37,8 @@
 /join                                 /join.html            200
 /success                              /success.html         200
 /404                                  /404.html             200
+/privacy-policy                       /privacy-policy.html  200
+/cookie-policy                        /cookie-policy.html   200
 
 
 
