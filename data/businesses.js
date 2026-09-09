@@ -858,7 +858,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mosswood%20Industrial%20Supplies%2C%2033%20Court%20Road%20Industrial%20Estate%2C%20Cwmbran%2C%20NP44%203AS%2C%20Cwmbran%2C%20NP44%2C%20UK"
       },
       "shortDescription": "Cwmbran industrial supplier offering hand tools, power tools, accessories, fixings, woodworking, gardening, welding and safety wear.",
-      "heroImage": "assets/images/businesses/mosswood-industrial-supplies/mosswood-industrial-supplies-hero-shop.jpg",
+      "heroImage": "assets/images/businesses/mosswood-industrial-supplies/mosswood-industrial-supplies-shop-exterior.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/mosswood-industrial-supplies-cwmbra",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
@@ -953,7 +953,7 @@ window.NP_BUSINESS_DATA = {
         "secondaryPhone": "01633 842842"
       },
       "shortDescription": "Family-run flooring specialists with Cwmbran and Newport showrooms, supplying carpets, rugs, runners, blinds, laminates, hard floors and LVT.",
-      "heroImage": "assets/images/businesses/mg-carpets-and-rugs/mg-carpets-and-rugs-hero-rugs.jpg",
+      "heroImage": "assets/images/businesses/mg-carpets-and-rugs/mg-carpets-and-rugs-gallery-rugs.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/mg-carpets-rugs",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
@@ -1114,7 +1114,7 @@ window.NP_BUSINESS_DATA = {
         "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Springvale%20MOT%20Centre%2C%20Cwmbran%2C%2097%20Springvale%20Industrial%20Estate%2C%20Cwmbran%2C%20Torfaen%2C%20NP44%205BH%2C%20Cwmbran%2C%20NP44%2C%20UK"
       },
       "shortDescription": "Cwmbran MOT and service centre providing MOTs, vehicle repairs, diagnostics, servicing and testing for cars, vans and motorcycles.",
-      "heroImage": "assets/images/businesses/springvale-mot-centre-cwmbran/springvale-mot-centre-cwmbran-hero-workshop.jpg",
+      "heroImage": "assets/images/businesses/springvale-mot-centre-cwmbran/springvale-mot-centre-cwmbran-workshop.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/springvale-mot-centre",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
@@ -1580,7 +1580,7 @@ window.NP_BUSINESS_DATA = {
         "secondaryPhone": "01495 735858"
       },
       "shortDescription": "Pontypool minibus hire for weddings, contracts, airports, schools, day trips, business events and accessible group travel.",
-      "heroImage": "assets/images/businesses/murray-s-minibus-hire/murray-s-minibus-hire-hero-fleet.jpg",
+      "heroImage": "assets/images/businesses/murray-s-minibus-hire/murray-s-minibus-hire-gallery-02.jpg",
       "sourcePageUrl": "https://www.newportlocalbusiness.co.uk/murrays-minibus-hire",
       "cardImageFit": "contain",
       "aboutSource": "live-site",
