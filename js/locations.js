@@ -16,8 +16,11 @@
 
   document.querySelector("[data-location-grid]").innerHTML = locations
     .map((location) => {
-      const items = byLocation[location].sort((a, b) => a.name.localeCompare(b.name));
-      const preview = items.slice(0, 3);
+      const items = byLocation[location].sort((a, b) => {
+        if (Boolean(a.featured) !== Boolean(b.featured)) return a.featured ? -1 : 1;
+        return a.name.localeCompare(b.name);
+      });
+      const preview = items.slice(0, 4);
       return `
         <article class="location-card">
           <p class="brand-kicker">NP local area</p>
