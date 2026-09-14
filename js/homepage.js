@@ -1,5 +1,5 @@
 (async function () {
-  const businesses = await window.NP.loadBusinesses();
+  const businesses = (await window.NP.loadBusinesses()).filter((b) => b.active !== false);
   document.querySelector("[data-hero-copy]").textContent = window.NP.site.hero.copy;
   window.NP.renderCategoryCards(document.querySelector("[data-category-grid]"), businesses);
 

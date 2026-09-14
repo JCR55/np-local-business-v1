@@ -2090,6 +2090,7 @@
       "cardImage": "assets/images/businesses/happier-feet/happier-feet-gallery-01.jpg",
       "logo": "assets/images/businesses/happier-feet/happier-feet-gallery-01.jpg",
       "name": "Happier Feet",
+      "active": false,
       "social": {
         "facebook": "https://www.facebook.com/happierfeet",
         "instagram": "",

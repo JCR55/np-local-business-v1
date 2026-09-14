@@ -45,6 +45,7 @@ collections:
               - { label: "Full Description", name: "description", widget: "text" }
               - { label: "Featured", name: "featured", widget: "boolean", default: false }
               - { label: "Verified", name: "verified", widget: "boolean", default: false }
+              - { label: "Active", name: "active", widget: "boolean", default: true, hint: "Uncheck to hide from listing grids without deleting the profile. Reversible." }
 
               - { label: "Hero Image (path)", name: "heroImage", widget: "string", required: false }
               - { label: "Hero Position", name: "heroPosition", widget: "string", required: false }

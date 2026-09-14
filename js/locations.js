@@ -1,5 +1,5 @@
 (async function () {
-  const businesses = await window.NP.loadBusinesses();
+  const businesses = (await window.NP.loadBusinesses()).filter((b) => b.active !== false);
 
   const byLocation = businesses.reduce((map, business) => {
     const location = window.NP.displayTown(business);

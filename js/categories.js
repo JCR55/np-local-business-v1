@@ -1,5 +1,5 @@
 (async function () {
-  const businesses = await window.NP.loadBusinesses();
+  const businesses = (await window.NP.loadBusinesses()).filter((b) => b.active !== false);
   const params = new URLSearchParams(location.search);
   const query = params.get("q") || "";
   const category = params.get("category") || "";
