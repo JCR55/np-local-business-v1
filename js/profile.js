@@ -333,15 +333,6 @@
     `;
   }
 
-  function renderInactiveNotice() {
-    return `
-      <div class="profile-inactive-notice" role="status">
-        ${window.NP.icon("shield")}
-        <span>${window.NP.escapeHtml(business.name)} is no longer an active member of NP Local Business. This profile is kept for reference and its details may be out of date.</span>
-      </div>
-    `;
-  }
-
   function renderFooterCta() {
     return `
       <section class="profile-footer-cta" aria-label="Contact ${window.NP.escapeHtml(business.name)}">
@@ -360,7 +351,6 @@
   renderSeo();
 
   root.innerHTML = `
-    ${business.active === false ? renderInactiveNotice() : ""}
     <section class="profile-hero" data-business-id="${window.NP.escapeHtml(business.id)}">
       <div class="profile-hero__media">
         <img src="${window.NP.escapeHtml(profileImage(business.heroImage))}" alt="${window.NP.escapeHtml(imageAlt("heroImage", business.heroImage, ""))}" style="--hero-position: ${window.NP.escapeHtml(business.heroPosition || "center")}" />
