@@ -133,28 +133,41 @@
 
   function profileReturnLink() {
     const rawReturn = new URLSearchParams(location.search).get("return");
-    if (!rawReturn) return "";
-    const href = rawReturn.trim();
-    const page = href.split("?")[0];
-    if (!["/categories", "/locations"].includes(page)) return "";
+    if (rawReturn) {
+      const href = rawReturn.trim();
+      const page = href.split("?")[0];
+      if (["/categories", "/locations"].includes(page)) {
+        const query = href.includes("?") ? href.slice(href.indexOf("?") + 1) : "";
+        const returnParams = new URLSearchParams(query);
+        const locationName = returnParams.get("location");
+        const categoryName = returnParams.get("category");
+        const searchQuery = returnParams.get("q");
+        let label = "Back to results";
+        if (locationName) {
+          label = `Back to ${locationName} results`;
+        } else if (categoryName) {
+          label = `Back to ${categoryName}`;
+        } else if (searchQuery) {
+          label = "Back to search results";
+        } else if (page === "/locations") {
+          label = "Back to locations";
+        }
 
-    const query = href.includes("?") ? href.slice(href.indexOf("?") + 1) : "";
-    const returnParams = new URLSearchParams(query);
-    const locationName = returnParams.get("location");
-    const categoryName = returnParams.get("category");
-    const searchQuery = returnParams.get("q");
-    let label = "Back to results";
-    if (locationName) {
-      label = `Back to ${locationName} results`;
-    } else if (categoryName) {
-      label = `Back to ${categoryName}`;
-    } else if (searchQuery) {
-      label = "Back to search results";
-    } else if (page === "/locations") {
-      label = "Back to locations";
+        return `<a class="profile-return-link" href="${window.NP.escapeHtml(href)}"><span aria-hidden="true">&larr;</span>${window.NP.escapeHtml(label)}</a>`;
+      }
     }
 
-    return `<a class="profile-return-link" href="${window.NP.escapeHtml(href)}"><span aria-hidden="true">&larr;</span>${window.NP.escapeHtml(label)}</a>`;
+    // No explicit return target — fall back to a plain browser-history back
+    // button, but only when there's actually somewhere to go back to. A
+    // direct visit (typed URL, bookmark) has an empty referrer even though
+    // history.length can still read 2 (a new tab's blank initial entry
+    // counts), so check both: history.back() would otherwise just land on
+    // a blank tab instead of a real previous page.
+    if (document.referrer && window.history.length > 1) {
+      return `<button class="profile-return-link" type="button" data-profile-back><span aria-hidden="true">&larr;</span>Back</button>`;
+    }
+
+    return "";
   }
 
   function imageAlt(kind, image, fallback = "") {
@@ -392,6 +405,10 @@
       <img src="" alt="" data-gallery-lightbox-image />
     </div>
   `;
+
+  document.querySelector("[data-profile-back]")?.addEventListener("click", () => {
+    history.back();
+  });
 
   document.querySelectorAll("[data-gallery-image]").forEach((button) => {
     const thumbImage = button.querySelector("img");
