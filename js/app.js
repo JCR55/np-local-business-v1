@@ -179,6 +179,15 @@
     document.body.appendChild(script);
   }
 
+  function loadAnalytics() {
+    // Loaded here (same reasoning as loadCookieConsent) so GA4 applies
+    // site-wide from this one shared, already-included script. The script
+    // itself gates the actual gtag.js request on cookie consent.
+    const script = document.createElement("script");
+    script.src = "/js/analytics.js";
+    document.body.appendChild(script);
+  }
+
   function returnPathForCurrentPage() {
     const currentPage = location.pathname || "/";
     if (currentPage === "/categories" && location.search) {
@@ -287,6 +296,7 @@
   renderFooter();
   renderSiteSocials();
   loadCookieConsent();
+  loadAnalytics();
 
   window.NP = {
     site,

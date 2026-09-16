@@ -30,6 +30,7 @@
       // localStorage unavailable (e.g. private browsing) - consent still applies to this page view.
     }
     window.npCookieConsent = choice;
+    document.dispatchEvent(new CustomEvent("npcookieconsent", { detail: choice }));
   }
 
   function removeBanner(banner) {
@@ -44,7 +45,7 @@
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-label", "Cookie consent");
     banner.innerHTML =
-      '<p>We use only essential storage to run this site — no analytics or marketing cookies are set. See our <a href="/cookie-policy">Cookie Policy</a>.</p>' +
+      '<p>We use essential storage to run this site, and, if you accept, Google Analytics to help us understand how the site is used. See our <a href="/cookie-policy">Cookie Policy</a>.</p>' +
       '<div class="cookie-consent-banner__actions">' +
       '<button type="button" class="button button--light" data-cookie-consent="decline">Decline</button>' +
       '<button type="button" class="button button--primary" data-cookie-consent="accept">Accept</button>' +
@@ -64,6 +65,7 @@
   var existing = readConsent();
   if (existing) {
     window.npCookieConsent = existing;
+    document.dispatchEvent(new CustomEvent("npcookieconsent", { detail: existing }));
     return;
   }
 
