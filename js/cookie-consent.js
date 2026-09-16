@@ -45,7 +45,7 @@
     banner.setAttribute("role", "region");
     banner.setAttribute("aria-label", "Cookie consent");
     banner.innerHTML =
-      '<p>We use essential storage to run this site, and, if you accept, Google Analytics to help us understand how the site is used. See our <a href="/cookie-policy">Cookie Policy</a>.</p>' +
+      '<p>We use essential storage to run this site, and, if you accept, analytics cookies to help us understand how the site is used. See our <a href="/cookie-policy">Cookie Policy</a>.</p>' +
       '<div class="cookie-consent-banner__actions">' +
       '<button type="button" class="button button--light" data-cookie-consent="decline">Decline</button>' +
       '<button type="button" class="button button--primary" data-cookie-consent="accept">Accept</button>' +
