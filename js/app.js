@@ -293,13 +293,28 @@
     ];
   }
 
+  // Whether a word found in the business's data satisfies a query word.
+  // Exact match (plus a naive plural/singular match) always counts. A
+  // prefix match only counts once the query word is 4+ letters - shorter
+  // than that, prefix matching does more harm than good: "car" as a
+  // 3-letter prefix would match "care", "carry", "cards" and "carpentry",
+  // none of which have anything to do with cars. A 4+ letter fragment like
+  // "roof" matching "roofing", or "carp" matching "carpets", is a
+  // deliberate enough fragment that the extra recall is worth it.
+  function wordMatches(fieldWord, needleWord) {
+    if (fieldWord === needleWord) return true;
+    if (fieldWord === needleWord + "s" || needleWord === fieldWord + "s") return true;
+    if (needleWord.length >= 4 && fieldWord.startsWith(needleWord)) return true;
+    return false;
+  }
+
   function matchScore(business, needleWords) {
     let score = 0;
     for (const word of needleWords) {
       let wordMatched = false;
       for (const field of searchFields(business)) {
         const fieldWords = tokenize(field.text);
-        if (fieldWords.some((fieldWord) => fieldWord === word || fieldWord.startsWith(word))) {
+        if (fieldWords.some((fieldWord) => wordMatches(fieldWord, word))) {
           score += field.weight;
           wordMatched = true;
         }
