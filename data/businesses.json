@@ -3451,17 +3451,25 @@
         "cardImage": "Pets @ Rest pet crematorium logo.",
         "heroImage": "Woman comforting her dog at sunset, representing the bond Pets @ Rest helps families honour.",
         "gallery": {
-          "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Woman comforting her dog at sunset, representing the bond Pets @ Rest helps families honour.",
-          "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp": "Pets @ Rest reception area.",
-          "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp": "Pets @ Rest waiting area."
+          "assets/images/businesses/pets-at-rest/pets-at-rest-viewing-room.jpg": "Pets @ Rest's comfortable quiet room, with seating and a memorial display for visiting families.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-clay-keepsake.webp": "Clay paw print keepsake made by Pets @ Rest, framed in blue.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-mother-of-pearl-urn.webp": "Mother of pearl and gold memorial urn with tea light holder.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-heart-keepsake.webp": "Heart-shaped keepsake stone with gold paw prints.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-cat-urn.jpg": "White ceramic cat-shaped memorial urn.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-pewter-paw-print-urn.jpg": "Pewter memorial urn with gold paw print detailing.",
+          "assets/images/businesses/pets-at-rest/pets-at-rest-wooden-paw-print-urn.jpg": "Wooden memorial urn with brass paw print inlay."
         }
       },
       "specificCategory": "Pet Crematorium",
       "town": "Cwmbran",
       "gallery": [
-        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg",
-        "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp",
-        "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp"
+        "assets/images/businesses/pets-at-rest/pets-at-rest-viewing-room.jpg",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-clay-keepsake.webp",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-mother-of-pearl-urn.webp",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-heart-keepsake.webp",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-cat-urn.jpg",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-pewter-paw-print-urn.jpg",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-wooden-paw-print-urn.jpg"
       ],
       "location": "Cwmbran",
       "openingHours": [
@@ -3489,9 +3497,13 @@
       "category": "Pet Services",
       "subcategory": "Pet Cremation & Bereavement",
       "galleryCaptions": {
-        "assets/images/businesses/pets-at-rest/pets-at-rest-hero.jpg": "Pets @ Rest — gentle, individual pet cremation care",
-        "assets/images/businesses/pets-at-rest/pets-at-rest-reception.webp": "Pets @ Rest reception area",
-        "assets/images/businesses/pets-at-rest/pets-at-rest-waiting-area.webp": "Pets @ Rest waiting area"
+        "assets/images/businesses/pets-at-rest/pets-at-rest-viewing-room.jpg": "Pets @ Rest quiet room for visiting families",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-clay-keepsake.webp": "Clay paw print keepsake",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-mother-of-pearl-urn.webp": "Mother of pearl memorial urn",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-paw-print-heart-keepsake.webp": "Paw print heart keepsake",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-cat-urn.jpg": "Cat-shaped memorial urn",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-pewter-paw-print-urn.jpg": "Pewter paw print urn",
+        "assets/images/businesses/pets-at-rest/pets-at-rest-wooden-paw-print-urn.jpg": "Wooden paw print urn"
       },
       "highlights": [
         "Pet Services",
