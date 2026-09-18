@@ -265,31 +265,66 @@
       .join("");
   }
 
-  function filterBusinesses(businesses, query, category) {
-    const needle = String(query || "").trim().toLowerCase();
-    const townNeedle = knownTownSearch(query);
-    return businesses.filter((business) => {
-      const matchesCategory = !category || normalizeCategory(business) === category;
-      if (townNeedle) {
-        return matchesCategory && displayTown(business).toLowerCase() === townNeedle;
+  function tokenize(text) {
+    return String(text || "").toLowerCase().match(/[a-z0-9]+/g) || [];
+  }
+
+  // Weighted fields to score matches against, most important first. A plain
+  // "does this text contain that text" search treats "carpets" as a match
+  // for "pets" (it's right there as a substring), which floods results for
+  // any short, common query with unrelated businesses. Matching whole
+  // tokens - and requiring every query word to hit at least one field -
+  // fixes that, and scoring by which field matched lets a name match (e.g.
+  // "Pets @ Rest" for "pets") outrank an incidental mention buried in a
+  // long description.
+  function searchFields(business) {
+    return [
+      { text: business.name, weight: 5 },
+      { text: normalizeCategory(business), weight: 3 },
+      { text: business.subcategory, weight: 3 },
+      { text: (business.highlights || []).join(" "), weight: 3 },
+      { text: (business.services || []).join(" "), weight: 2 },
+      { text: business.location, weight: 2 },
+      { text: displayTown(business), weight: 2 },
+      { text: business.postcodeArea, weight: 1 },
+      { text: business.contact?.address, weight: 1 },
+      { text: business.shortDescription, weight: 1 },
+      { text: business.description, weight: 1 }
+    ];
+  }
+
+  function matchScore(business, needleWords) {
+    let score = 0;
+    for (const word of needleWords) {
+      let wordMatched = false;
+      for (const field of searchFields(business)) {
+        const fieldWords = tokenize(field.text);
+        if (fieldWords.some((fieldWord) => fieldWord === word || fieldWord.startsWith(word))) {
+          score += field.weight;
+          wordMatched = true;
+        }
       }
-      const haystack = [
-        business.name,
-        normalizeCategory(business),
-        business.subcategory,
-        business.location,
-        displayTown(business),
-        business.postcodeArea,
-        business.contact?.address,
-        business.shortDescription,
-        business.description,
-        ...(business.services || []),
-        ...(business.highlights || [])
-      ]
-        .join(" ")
-        .toLowerCase();
-      return matchesCategory && (!needle || haystack.includes(needle));
-    });
+      if (!wordMatched) return -1;
+    }
+    return score;
+  }
+
+  function filterBusinesses(businesses, query, category) {
+    const townNeedle = knownTownSearch(query);
+    const inCategory = businesses.filter((business) => !category || normalizeCategory(business) === category);
+
+    if (townNeedle) {
+      return inCategory.filter((business) => displayTown(business).toLowerCase() === townNeedle);
+    }
+
+    const needleWords = tokenize(query);
+    if (!needleWords.length) return inCategory;
+
+    return inCategory
+      .map((business) => ({ business, score: matchScore(business, needleWords) }))
+      .filter(({ score }) => score >= 0)
+      .sort((a, b) => b.score - a.score)
+      .map(({ business }) => business);
   }
 
   renderHeader();
